@@ -18,8 +18,8 @@ const StatItem = ({
   value: string | number
 }) => {
   return (
-    <div className="items-center justify-center m-1 w-1/4 dark:text-white">
-      <div className="text-3xl font-bold">{value}</div>
+    <div className="items-center justify-center w-1/4 m-1 dark:text-white">
+      <div className="text-2xl font-bold">{value}</div>
       <div className="text-xs">{label}</div>
     </div>
   )

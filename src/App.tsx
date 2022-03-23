@@ -241,13 +241,13 @@ function App() {
   }
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="flex flex-col h-screen">
       <Navbar
         setIsInfoModalOpen={setIsInfoModalOpen}
         setIsStatsModalOpen={setIsStatsModalOpen}
         setIsSettingsModalOpen={setIsSettingsModalOpen}
       />
-      <div className="pt-2 px-1 pb-8 md:max-w-7xl w-full mx-auto sm:px-6 lg:px-8 flex flex-col grow">
+      <div className="flex flex-col w-full px-1 pt-2 pb-8 mx-auto md:max-w-7xl sm:px-6 lg:px-8 grow">
         <div className="pb-6 grow">
           <Grid
             guesses={guesses}
