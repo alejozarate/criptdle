@@ -5,10 +5,11 @@ import { getGuessStatuses } from './statuses'
 import { default as GraphemeSplitter } from 'grapheme-splitter'
 
 export const isWordInWordList = (word: string) => {
-    return (
-        WORDS.includes(localeAwareLowerCase(word)) ||
-        VALID_GUESSES.includes(localeAwareLowerCase(word))
-    )
+    return true
+    /*
+        Until there are enough valid crypto guesses, the isWordInList validation should return always true
+        WORDS.includes(localeAwareLowerCase(word)) || 
+        VALID_GUESSES.includes(localeAwareLowerCase(word)) */
 }
 
 export const isWinningWord = (word: string) => {

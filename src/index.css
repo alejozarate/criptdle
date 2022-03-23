@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    font-family: 'Nunito', sans-serif;
+}
 :root {
     --animation-speed: 1000ms;
     --animation-speed-fast: 250ms;
@@ -79,6 +82,12 @@ svg.cursor-pointer:hover {
 
 .right-icons {
     display: flex;
+}
+
+.sLogo {
+    max-width: 25px;
+    height: auto;
+    margin: 0 10px 5px 0;
 }
 
 @keyframes revealAbsentCharCell {

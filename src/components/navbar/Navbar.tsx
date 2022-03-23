@@ -23,8 +23,13 @@ export const Navbar = ({
                     className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
                     onClick={() => setIsInfoModalOpen(true)}
                 />
-                <p className="text-xl ml-2.5 font-bold dark:text-white">
-                    {GAME_TITLE}
+                <p className="text-xl ml-2.5 font-bold dark:text-white flex items-center">
+                    <span>
+                        <a href="https://discord.gg/kHvSC9WHzC" target="_blank">
+                            <img src="./solow.png" className="sLogo" />
+                        </a>
+                    </span>
+                    <span>{GAME_TITLE}</span>
                 </p>
                 <div className="right-icons">
                     <ChartBarIcon
