@@ -5,16 +5,16 @@ export const GAME_COPIED_MESSAGE = 'Copiado al portapapeles'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'No has completado suficientes letras'
 export const WORD_NOT_FOUND_MESSAGE = 'Palabra no encontrada'
 export const HARD_MODE_ALERT_MESSAGE =
-  'El modo difícil solo puede ser seleccionado al comienzo'
+    'El modo difícil solo puede ser seleccionado al comienzo'
 export const HARD_MODE_DESCRIPTION =
-  'Todas las pistas reveladas deben ser usadas en el próximo intento'
+    'Todas las pistas reveladas deben ser usadas en el próximo intento'
 export const HIGH_CONTRAST_MODE_DESCRIPTION = 'Para mejorar el contraste'
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
-  `La palabra era ${solution}`
+    `La palabra era ${solution}`
 export const WRONG_SPOT_MESSAGE = (guess: string, position: number) =>
-  `Debes usar la letra ${guess} en la posición ${position}`
+    `Debes usar la letra ${guess} en la posición ${position}`
 export const NOT_CONTAINED_MESSAGE = (letter: string) =>
-  `El intento debe contener la letra ${letter}`
+    `El intento debe contener la letra ${letter}`
 export const ENTER_TEXT = 'Enter'
 export const DELETE_TEXT = 'Borrar'
 export const STATISTICS_TITLE = 'Estadísticas'
