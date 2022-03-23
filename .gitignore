@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+# developing
+fetcher.js
+fetcherResult.txt
+
 # testing
 /coverage
 
