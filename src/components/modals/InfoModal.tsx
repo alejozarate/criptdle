@@ -14,9 +14,9 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
             handleClose={handleClose}
         >
             <p className="text-sm text-gray-500 dark:text-gray-300">
-                Descubre la palabra en 6 intentos. Después de cada uno, el color
-                de las cajas cambiará para mostrar cuán cerca estuviste de cada
-                palabra.
+                Tenés 6 intentos para descubrir la palabra cripto del día.
+                Después de cada intento, el color de las letras va a cambiar
+                para que veas que tan cerca estás de la solución.
             </p>
 
             <div className="flex justify-center mt-4 mb-1">
@@ -73,7 +73,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                 que todos conocemos y amamos -{' '}
                 <a
                     href="https://github.com/cwackerfuss/react-wordle"
-                    className="font-bold underline outline-0"
+                    target="_blank"
+                    className="font-bold underline outline-0 outline-none"
                 >
                     mirá el código acá
                 </a>{' '}

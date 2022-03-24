@@ -70,13 +70,13 @@ export const StatsModal = ({
                             <a
                                 href="https://www.defilatam.com/definiciones"
                                 target="_blank"
-                                className="underline"
+                                className="underline outline-none"
                             >
                                 DeFi Latam
                             </a>{' '}
                         </small>
                         <br />
-                        <small className="dark:text-white">
+                        <small className="dark:text-white mb-4 outline-none">
                             ** Para seguir aprendiendo de cripto sumate al{' '}
                             <a
                                 href="https://discord.com/invite/kHvSC9WHzC"
