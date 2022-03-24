@@ -55,13 +55,38 @@ export const StatsModal = ({
     return (
         <BaseModal title={''} isOpen={isOpen} handleClose={handleClose}>
             <div className="items-center sm:flex">
-                <div>
-                    <p className="mb-4 text-xl font-medium leading-6 text-gray-900 underline text-md dark:text-gray-100">
-                        {solution}
-                    </p>
-                    <p className="italic font-bold text-center text-gray-900 sm:px-1 text-md dark:text-gray-100">
-                        {WORDS_DESCRIPTION[solution.toLowerCase()]}
-                    </p>
+                <div className="flex flex-col space-beetwen">
+                    <div>
+                        <p className="mb-4 text-xl font-medium leading-6 text-gray-900 underline text-md dark:text-gray-100">
+                            {solution}
+                        </p>
+                        <p className="italic font-bold text-center text-gray-900 sm:px-1 text-md dark:text-gray-100">
+                            {WORDS_DESCRIPTION[solution.toLowerCase()]}*
+                        </p>
+                    </div>
+                    <div className="mt-6">
+                        <small className="dark:text-white">
+                            * Las definiciones son de{' '}
+                            <a
+                                href="https://www.defilatam.com/definiciones"
+                                target="_blank"
+                                className="underline"
+                            >
+                                DeFi Latam
+                            </a>{' '}
+                        </small>
+                        <br />
+                        <small className="dark:text-white">
+                            ** Para seguir aprendiendo de cripto sumate al{' '}
+                            <a
+                                href="https://discord.com/invite/kHvSC9WHzC"
+                                target="_blank"
+                                className="underline"
+                            >
+                                discord de Solow
+                            </a>
+                        </small>
+                    </div>
                 </div>
                 <div>
                     <h3 className="font-medium leading-6 text-gray-900 text-md dark:text-gray-100">
