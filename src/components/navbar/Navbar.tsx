@@ -25,8 +25,16 @@ export const Navbar = ({
                 />
                 <p className="text-xl ml-2.5 font-bold dark:text-white flex items-center">
                     <span>
-                        <a href="https://discord.gg/kHvSC9WHzC" target="_blank">
-                            <img src="./solow.png" className="sLogo" />
+                        <a
+                            href="https://discord.gg/kHvSC9WHzC"
+                            rel="noreferrer"
+                            target="_blank"
+                        >
+                            <img
+                                src="./solow.png"
+                                alt="Solow"
+                                className="sLogo"
+                            />
                         </a>
                     </span>
                     <span>{GAME_TITLE}</span>
