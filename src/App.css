@@ -1,3 +1,9 @@
 html.dark {
-    background-color: rgb(15, 23, 42);
+    /* background-color: rgb(15, 23, 42); */
+    background: radial-gradient(
+            54.06% 54.06% at 50% 50%,
+            rgba(31, 47, 87, 0.2) 0%,
+            rgba(5, 8, 15, 0.2) 93.02%
+        ),
+        #0f172a;
 }

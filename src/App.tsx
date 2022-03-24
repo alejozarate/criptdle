@@ -256,6 +256,9 @@ function App() {
                 setIsStatsModalOpen={setIsStatsModalOpen}
                 setIsSettingsModalOpen={setIsSettingsModalOpen}
             />
+            <p className="dark:text-white text-center navbar">
+                ¿Cuál es la palabra cripto de hoy?
+            </p>
             <div className="flex flex-col w-full px-1 pt-2 pb-8 mx-auto md:max-w-7xl sm:px-6 lg:px-8 grow">
                 <div className="pb-6 grow">
                     <Grid
