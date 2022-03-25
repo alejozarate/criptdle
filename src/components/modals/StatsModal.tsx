@@ -67,7 +67,7 @@ export const StatsModal = ({
                         </div>
                         <div className="mt-6">
                             <small className="dark:text-white">
-                                * Las definiciones son de{' '}
+                                * Muchas definiciones son de{' '}
                                 <a
                                     href="https://www.defilatam.com/definiciones"
                                     target="_blank"
