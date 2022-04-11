@@ -4,6 +4,7 @@ import {
     InformationCircleIcon,
 } from '@heroicons/react/outline'
 import { GAME_TITLE } from '../../constants/strings'
+import TwitterButton from '../authentication/TwitterButton'
 
 type Props = {
     setIsInfoModalOpen: (value: boolean) => void
@@ -45,9 +46,11 @@ export const Navbar = ({
                         onClick={() => setIsStatsModalOpen(true)}
                     />
                     <CogIcon
-                        className="h-6 w-6 cursor-pointer dark:stroke-white"
+                        className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
                         onClick={() => setIsSettingsModalOpen(true)}
                     />
+                    {/* Twitter login component */}
+                    <TwitterButton />
                 </div>
             </div>
             <hr></hr>
