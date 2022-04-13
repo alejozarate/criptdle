@@ -26,6 +26,7 @@ export const postUserToDb = async (data: dataUser) => {
         const newUser = {
             username: data.displayName,
             userId: data.uid,
+            score: 0,
         }
         await setDoc(doc(db, 'users', newUser.userId), newUser)
         console.log('creado')
