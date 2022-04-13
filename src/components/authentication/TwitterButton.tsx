@@ -5,6 +5,7 @@ import {
     saveTwitterUserToLocalStorage,
     getTwitterUser,
 } from '../../lib/localStorage'
+import { postUserToDb } from '../../lib/firebaseActions'
 
 const TwitterButton = () => {
     const [authenticated, setAuthenticated] = useState<Boolean>(false)
@@ -15,6 +16,7 @@ const TwitterButton = () => {
         signInWithPopup(auth, provider)
             .then((res) => {
                 saveTwitterUserToLocalStorage(res.user)
+                checkUserAuth()
             })
             .catch((err) => {
                 console.log(err)
@@ -28,6 +30,9 @@ const TwitterButton = () => {
         if (displayName || uid) {
             setAuthenticated(true)
             setUsername(displayName)
+            postUserToDb({ displayName, uid })
+        } else {
+            console.log('twitter user not recognized')
         }
     }
 
