@@ -99,6 +99,7 @@ function App() {
                 setIsInfoModalOpen(true)
             }, WELCOME_INFO_MODAL_MS)
         }
+        console.log(stats)
     }, [])
 
     useEffect(() => {

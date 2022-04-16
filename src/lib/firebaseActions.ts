@@ -1,5 +1,6 @@
 import { db } from '../firebase'
 import { doc, setDoc, updateDoc, getDoc } from 'firebase/firestore'
+import { getTwitterUser } from './localStorage'
 
 interface dataUser {
     displayName: string
@@ -33,8 +34,10 @@ export const postUserToDb = async (data: dataUser) => {
     }
 }
 
-export const updateScore = async (uid: string, newScore: number) => {
-    await updateDoc(doc(db, 'users', uid), {
+export const updateScore = async (newScore: number) => {
+    const localStorageUser = getTwitterUser()
+
+    await updateDoc(doc(db, 'users', localStorageUser.uid), {
         score: newScore,
     })
 }
