@@ -39,6 +39,7 @@ import './App.css'
 import { AlertContainer } from './components/alerts/AlertContainer'
 import { useAlert } from './context/AlertContext'
 import { Navbar } from './components/navbar/Navbar'
+import { updateScore } from './lib/firebaseActions'
 
 function App() {
     const prefersDarkMode = window.matchMedia(
@@ -80,6 +81,7 @@ function App() {
                 persist: true,
             })
         }
+
         return loaded.guesses
     })
 
@@ -235,6 +237,8 @@ function App() {
             setCurrentGuess('')
 
             if (winningWord) {
+                console.log('winning word!!!!!!!')
+                updateScore(guesses.length)
                 setStats(addStatsForCompletedGame(stats, guesses.length))
                 return setIsGameWon(true)
             }
@@ -242,6 +246,7 @@ function App() {
             if (guesses.length === MAX_CHALLENGES - 1) {
                 setStats(addStatsForCompletedGame(stats, guesses.length + 1))
                 setIsGameLost(true)
+                updateScore(6)
                 showErrorAlert(CORRECT_WORD_MESSAGE(solution), {
                     persist: true,
                     delayMs: REVEAL_TIME_MS * MAX_WORD_LENGTH + 1,

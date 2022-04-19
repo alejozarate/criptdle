@@ -1,6 +1,6 @@
 import { db } from '../firebase'
 import { doc, setDoc, updateDoc, getDoc } from 'firebase/firestore'
-import { getTwitterUser } from './localStorage'
+import { getTwitterUser, loadGameStateFromLocalStorage } from './localStorage'
 
 interface dataUser {
     displayName: string
@@ -27,7 +27,7 @@ export const postUserToDb = async (data: dataUser) => {
         const newUser = {
             username: data.displayName,
             userId: data.uid,
-            score: 0,
+            score: null,
         }
         await setDoc(doc(db, 'users', newUser.userId), newUser)
         console.log('creado')
@@ -36,8 +36,16 @@ export const postUserToDb = async (data: dataUser) => {
 
 export const updateScore = async (newScore: number) => {
     const localStorageUser = getTwitterUser()
+    const docRef = doc(db, 'users', localStorageUser.uid)
 
-    await updateDoc(doc(db, 'users', localStorageUser.uid), {
-        score: newScore,
-    })
+    const docSnap = await getDoc(docRef)
+
+    if (docSnap.exists()) {
+        const { score } = docSnap.data()
+        await updateDoc(doc(db, 'users', localStorageUser.uid), {
+            score: score + newScore,
+        })
+    } else {
+        console.log('No such document!')
+    }
 }
