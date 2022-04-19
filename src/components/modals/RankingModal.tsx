@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react'
 import { BaseModal } from './BaseModal'
 
 import { getRanking, rankeredUser } from '../../lib/firebaseActions'
+import {
+    NEXT_PAGINATION_TEXT,
+    PREVIOUS_PAGINATION_TEXT,
+} from '../../constants/strings'
 
 type Props = {
     isOpen: boolean
@@ -76,7 +80,7 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
                                 onClick={() => setPage(page - 1)}
                                 disabled={page === 1}
                             >
-                                Atras
+                                {PREVIOUS_PAGINATION_TEXT}
                             </button>
 
                             <button
@@ -84,7 +88,7 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
                                 onClick={() => setPage(page + 1)}
                                 disabled={page >= pageQty}
                             >
-                                Siguiente
+                                {NEXT_PAGINATION_TEXT}
                             </button>
                         </div>
                     )}
