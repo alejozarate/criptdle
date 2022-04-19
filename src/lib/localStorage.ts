@@ -63,6 +63,10 @@ export const saveTwitterUserToLocalStorage = (twitterUser: twitterObject) => {
     localStorage.setItem('twitterData', JSON.stringify(objectData))
 }
 
+export const deleteTwitterUserFromLocalStorage = () => {
+    localStorage.removeItem('twitterData')
+}
+
 export const getTwitterUser = () => {
     const twitterUserLocal = JSON.parse(
         localStorage.getItem('twitterData') || '{}'
