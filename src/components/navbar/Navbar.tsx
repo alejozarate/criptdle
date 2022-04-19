@@ -2,6 +2,7 @@ import {
     ChartBarIcon,
     CogIcon,
     InformationCircleIcon,
+    StarIcon,
 } from '@heroicons/react/outline'
 import { GAME_TITLE } from '../../constants/strings'
 import TwitterButton from '../authentication/TwitterButton'
@@ -9,12 +10,14 @@ import TwitterButton from '../authentication/TwitterButton'
 type Props = {
     setIsInfoModalOpen: (value: boolean) => void
     setIsStatsModalOpen: (value: boolean) => void
+    setIsRankingModalOpen: (value: boolean) => void
     setIsSettingsModalOpen: (value: boolean) => void
 }
 
 export const Navbar = ({
     setIsInfoModalOpen,
     setIsStatsModalOpen,
+    setIsRankingModalOpen,
     setIsSettingsModalOpen,
 }: Props) => {
     return (
@@ -45,11 +48,14 @@ export const Navbar = ({
                         className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
                         onClick={() => setIsStatsModalOpen(true)}
                     />
+                    <StarIcon
+                        onClick={() => setIsRankingModalOpen(true)}
+                        className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
+                    />
                     <CogIcon
                         className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
                         onClick={() => setIsSettingsModalOpen(true)}
                     />
-                    {/* Twitter login component */}
                     <TwitterButton />
                 </div>
             </div>

@@ -4,6 +4,8 @@ import { Keyboard } from './components/keyboard/Keyboard'
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
+import { RankingModal } from './components/modals/RankingModal'
+
 import {
     WIN_MESSAGES,
     GAME_COPIED_MESSAGE,
@@ -52,6 +54,7 @@ function App() {
     const [isGameWon, setIsGameWon] = useState(false)
     const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
     const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
+    const [isRankingModalOpen, setIsRankingModalOpen] = useState(false)
     const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
     const [currentRowClass, setCurrentRowClass] = useState('')
     const [isGameLost, setIsGameLost] = useState(false)
@@ -260,6 +263,7 @@ function App() {
             <Navbar
                 setIsInfoModalOpen={setIsInfoModalOpen}
                 setIsStatsModalOpen={setIsStatsModalOpen}
+                setIsRankingModalOpen={setIsRankingModalOpen}
                 setIsSettingsModalOpen={setIsSettingsModalOpen}
             />
             <p className="dark:text-white text-center navbar">
@@ -310,6 +314,11 @@ function App() {
                     isHighContrastMode={isHighContrastMode}
                     handleHighContrastMode={handleHighContrastMode}
                 />
+                <RankingModal
+                    isOpen={isRankingModalOpen}
+                    handleClose={() => setIsRankingModalOpen(false)}
+                />
+
                 <AlertContainer />
             </div>
         </div>

@@ -1,10 +1,26 @@
 import { db } from '../firebase'
-import { doc, setDoc, updateDoc, getDoc } from 'firebase/firestore'
+import {
+    doc,
+    setDoc,
+    updateDoc,
+    getDoc,
+    getDocs,
+    collection,
+} from 'firebase/firestore'
 import { getTwitterUser, loadGameStateFromLocalStorage } from './localStorage'
 
 interface dataUser {
     displayName: string
     uid: string
+}
+
+export interface rankeredUser {
+    sort: any
+    map: any
+    userId: string
+    username: string
+    score: number
+    copinha: number
 }
 
 const checkUserExists = async (uid: string) => {
@@ -49,3 +65,28 @@ export const updateScore = async (newScore: number) => {
         console.log('No such document!')
     }
 }
+
+export const getRanking = async () => {
+    let users: any = []
+    const querySnapshot = await getDocs(collection(db, 'users'))
+    querySnapshot.forEach((doc) => {
+        const { userId, username, score } = doc.data()
+        if (score || score === 0) {
+            users.push({
+                userId,
+                username,
+                score,
+            })
+        }
+    })
+
+    let orderedRanking = users.sort(
+        (a: { score: number }, b: { score: number }) => {
+            return a.score - b.score
+        }
+    )
+
+    return orderedRanking
+}
+
+getRanking()
