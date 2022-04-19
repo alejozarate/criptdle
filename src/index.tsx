@@ -4,12 +4,15 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { AlertProvider } from './context/AlertContext'
+import { TwitterProvider } from './context/TwitterContext'
 
 ReactDOM.render(
     <React.StrictMode>
-        <AlertProvider>
-            <App />
-        </AlertProvider>
+        <TwitterProvider>
+            <AlertProvider>
+                <App />
+            </AlertProvider>
+        </TwitterProvider>
     </React.StrictMode>,
     document.getElementById('root')
 )

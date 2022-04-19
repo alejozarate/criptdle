@@ -14,6 +14,8 @@ type Props = {
     handleDarkMode: Function
     isHighContrastMode: boolean
     handleHighContrastMode: Function
+    isTwitterEnabled: boolean
+    handleTwitterUser: Function
 }
 
 export const SettingsModal = ({
@@ -25,6 +27,8 @@ export const SettingsModal = ({
     handleDarkMode,
     isHighContrastMode,
     handleHighContrastMode,
+    isTwitterEnabled,
+    handleTwitterUser,
 }: Props) => {
     return (
         <BaseModal
@@ -49,6 +53,12 @@ export const SettingsModal = ({
                     flag={isHighContrastMode}
                     handleFlag={handleHighContrastMode}
                     description={HIGH_CONTRAST_MODE_DESCRIPTION}
+                />
+                <SettingsToggle
+                    settingName="Twitter linkeado"
+                    flag={isTwitterEnabled}
+                    handleFlag={handleTwitterUser}
+                    description={'Activar o desactiva tu usuario de Twitter'}
                 />
             </div>
         </BaseModal>

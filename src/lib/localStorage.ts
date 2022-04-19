@@ -26,6 +26,11 @@ export type GameStats = {
     successRate: number
 }
 
+export type twitterObject = {
+    displayName: string | null
+    uid: string | null
+}
+
 export const saveStatsToLocalStorage = (gameStats: GameStats) => {
     localStorage.setItem(gameStatKey, JSON.stringify(gameStats))
 }
@@ -46,4 +51,25 @@ export const setStoredIsHighContrastMode = (isHighContrast: boolean) => {
 export const getStoredIsHighContrastMode = () => {
     const highContrast = localStorage.getItem(highContrastKey)
     return highContrast === '1'
+}
+
+export const saveTwitterUserToLocalStorage = (twitterUser: twitterObject) => {
+    const { displayName, uid } = twitterUser
+
+    const objectData = {
+        displayName,
+        uid,
+    }
+    localStorage.setItem('twitterData', JSON.stringify(objectData))
+}
+
+export const deleteTwitterUserFromLocalStorage = () => {
+    localStorage.removeItem('twitterData')
+}
+
+export const getTwitterUser = () => {
+    const twitterUserLocal = JSON.parse(
+        localStorage.getItem('twitterData') || '{}'
+    )
+    return twitterUserLocal
 }

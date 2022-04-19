@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { Grid } from './components/grid/Grid'
 import { Keyboard } from './components/keyboard/Keyboard'
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
+import { RankingModal } from './components/modals/RankingModal'
+
 import {
     WIN_MESSAGES,
     GAME_COPIED_MESSAGE,
@@ -39,8 +41,11 @@ import './App.css'
 import { AlertContainer } from './components/alerts/AlertContainer'
 import { useAlert } from './context/AlertContext'
 import { Navbar } from './components/navbar/Navbar'
+import { updateScore } from './lib/firebaseActions'
+import { TwitterCtx } from './context/TwitterContext'
 
 function App() {
+    const twitterContext = useContext(TwitterCtx)
     const prefersDarkMode = window.matchMedia(
         '(prefers-color-scheme: dark)'
     ).matches
@@ -51,9 +56,11 @@ function App() {
     const [isGameWon, setIsGameWon] = useState(false)
     const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
     const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
+    const [isRankingModalOpen, setIsRankingModalOpen] = useState(false)
     const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
     const [currentRowClass, setCurrentRowClass] = useState('')
     const [isGameLost, setIsGameLost] = useState(false)
+    const [isTwitterEnabled, setIsTwitterEnabled] = useState(false)
     const [isDarkMode, setIsDarkMode] = useState(
         localStorage.getItem('theme')
             ? localStorage.getItem('theme') === 'dark'
@@ -80,6 +87,7 @@ function App() {
                 persist: true,
             })
         }
+
         return loaded.guesses
     })
 
@@ -99,6 +107,7 @@ function App() {
                 setIsInfoModalOpen(true)
             }, WELCOME_INFO_MODAL_MS)
         }
+        console.log(stats)
     }, [])
 
     useEffect(() => {
@@ -129,6 +138,17 @@ function App() {
             localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
         } else {
             showErrorAlert(HARD_MODE_ALERT_MESSAGE)
+        }
+    }
+
+    const handleTwitterUser = (isTwitterEnabled: boolean) => {
+        setIsTwitterEnabled(isTwitterEnabled)
+        if (isTwitterEnabled) {
+            twitterContext?.twitterSignIn()
+        }
+
+        if (!isTwitterEnabled) {
+            twitterContext?.twitterSignOut()
         }
     }
 
@@ -163,6 +183,10 @@ function App() {
             }, GAME_LOST_INFO_DELAY)
         }
     }, [isGameWon, isGameLost, showSuccessAlert])
+
+    useEffect(() => {
+        setIsTwitterEnabled(twitterContext?.authenticated ? true : false)
+    }, [twitterContext?.authenticated])
 
     const onChar = (value: string) => {
         if (
@@ -234,6 +258,8 @@ function App() {
             setCurrentGuess('')
 
             if (winningWord) {
+                console.log('winning word!!!!!!!')
+                updateScore(guesses.length)
                 setStats(addStatsForCompletedGame(stats, guesses.length))
                 return setIsGameWon(true)
             }
@@ -241,6 +267,7 @@ function App() {
             if (guesses.length === MAX_CHALLENGES - 1) {
                 setStats(addStatsForCompletedGame(stats, guesses.length + 1))
                 setIsGameLost(true)
+                updateScore(6)
                 showErrorAlert(CORRECT_WORD_MESSAGE(solution), {
                     persist: true,
                     delayMs: REVEAL_TIME_MS * MAX_WORD_LENGTH + 1,
@@ -254,6 +281,7 @@ function App() {
             <Navbar
                 setIsInfoModalOpen={setIsInfoModalOpen}
                 setIsStatsModalOpen={setIsStatsModalOpen}
+                setIsRankingModalOpen={setIsRankingModalOpen}
                 setIsSettingsModalOpen={setIsSettingsModalOpen}
             />
             <p className="dark:text-white text-center navbar">
@@ -303,7 +331,14 @@ function App() {
                     handleDarkMode={handleDarkMode}
                     isHighContrastMode={isHighContrastMode}
                     handleHighContrastMode={handleHighContrastMode}
+                    isTwitterEnabled={isTwitterEnabled}
+                    handleTwitterUser={handleTwitterUser}
                 />
+                <RankingModal
+                    isOpen={isRankingModalOpen}
+                    handleClose={() => setIsRankingModalOpen(false)}
+                />
+
                 <AlertContainer />
             </div>
         </div>
