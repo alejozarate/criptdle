@@ -25,7 +25,7 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
             .catch((e) => {
                 console.log(e)
             })
-    }, [])
+    }, [isOpen])
 
     const handlePagination = () => {
         const start = (page - 1) * MAX_QTY_USERS_PER_PAGE

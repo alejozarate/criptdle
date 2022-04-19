@@ -258,7 +258,6 @@ function App() {
             setCurrentGuess('')
 
             if (winningWord) {
-                console.log('winning word!!!!!!!')
                 updateScore(guesses.length)
                 setStats(addStatsForCompletedGame(stats, guesses.length))
                 return setIsGameWon(true)
