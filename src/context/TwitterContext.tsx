@@ -39,7 +39,7 @@ export const TwitterProvider = ({ children }: Props) => {
                 checkUserAuth()
             })
             .catch((err) => {
-                console.log(err)
+                alert(`Error al iniciar sesión con Twitter ${err}`)
             })
     }
 
@@ -51,7 +51,7 @@ export const TwitterProvider = ({ children }: Props) => {
                 deleteTwitterUserFromLocalStorage()
             })
             .catch((err) => {
-                console.log(err)
+                alert(err)
             })
     }
 
@@ -64,7 +64,7 @@ export const TwitterProvider = ({ children }: Props) => {
             setUsername(displayName)
             postUserToDb({ displayName, uid })
         } else {
-            console.log('twitter user not recognized')
+            alert('Usuario no autenticado, intente nuevamente')
         }
     }
 

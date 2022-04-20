@@ -23,17 +23,16 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
                 setPageQty(Math.ceil(ranking.length / MAX_QTY_USERS_PER_PAGE))
             })
             .catch((e) => {
-                console.log(e)
+                alert(e)
             })
     }, [isOpen])
 
-    const handlePagination = () => {
-        const start = (page - 1) * MAX_QTY_USERS_PER_PAGE
-        const end = page * MAX_QTY_USERS_PER_PAGE
-        setRenderedRanking(ranking.slice(start, end))
-    }
-
     useEffect(() => {
+        const handlePagination = () => {
+            const start = (page - 1) * MAX_QTY_USERS_PER_PAGE
+            const end = page * MAX_QTY_USERS_PER_PAGE
+            setRenderedRanking(ranking.slice(start, end))
+        }
         handlePagination()
     }, [ranking, page])
 

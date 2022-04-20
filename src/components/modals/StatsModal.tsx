@@ -70,6 +70,7 @@ export const StatsModal = ({
                             <a
                                 href="https://www.defilatam.com/definiciones"
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 className="underline outline-none"
                             >
                                 DeFi Latam
@@ -81,6 +82,7 @@ export const StatsModal = ({
                             <a
                                 href="https://discord.com/invite/kHvSC9WHzC"
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 className="underline"
                             >
                                 discord de Solow

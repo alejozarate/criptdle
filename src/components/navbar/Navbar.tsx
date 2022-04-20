@@ -31,7 +31,7 @@ export const Navbar = ({
                     <span>
                         <a
                             href="https://discord.gg/kHvSC9WHzC"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                             target="_blank"
                         >
                             <img

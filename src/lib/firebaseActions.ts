@@ -7,7 +7,7 @@ import {
     getDocs,
     collection,
 } from 'firebase/firestore'
-import { getTwitterUser, loadGameStateFromLocalStorage } from './localStorage'
+import { getTwitterUser } from './localStorage'
 
 interface dataUser {
     displayName: string
@@ -39,14 +39,12 @@ export const postUserToDb = async (data: dataUser) => {
     if (exists) {
         return
     } else {
-        console.log('no existe')
         const newUser = {
             username: data.displayName,
             userId: data.uid,
             score: null,
         }
         await setDoc(doc(db, 'users', newUser.userId), newUser)
-        console.log('creado')
     }
 }
 
@@ -62,7 +60,7 @@ export const updateScore = async (newScore: number) => {
             score: score + newScore,
         })
     } else {
-        console.log('No such document!')
+        alert('No se pudo actualizar el score')
     }
 }
 

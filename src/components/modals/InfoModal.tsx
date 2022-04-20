@@ -74,6 +74,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                 <a
                     href="https://github.com/cwackerfuss/react-wordle"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="font-bold underline outline-0 outline-none"
                 >
                     mirá el código acá
