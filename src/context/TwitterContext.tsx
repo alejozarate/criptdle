@@ -32,6 +32,8 @@ export const TwitterProvider = ({ children }: Props) => {
     const [username, setUsername] = useState<string | null>('')
 
     const twitterSignIn = () => {
+        if (authenticated) return
+
         const provider = new TwitterAuthProvider()
         signInWithPopup(auth, provider)
             .then((res) => {

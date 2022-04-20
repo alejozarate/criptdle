@@ -22,12 +22,22 @@ export const Navbar = ({
 }: Props) => {
     return (
         <div className="navbar">
-            <div className="navbar-content px-5">
-                <InformationCircleIcon
-                    className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
-                    onClick={() => setIsInfoModalOpen(true)}
-                />
-                <p className="text-xl ml-2.5 font-bold dark:text-white flex items-center">
+            <div className="px-5 navbar-content">
+                <div className="flex">
+                    <InformationCircleIcon
+                        className="w-6 h-6 mr-2 cursor-pointer dark:stroke-white"
+                        onClick={() => setIsInfoModalOpen(true)}
+                    />
+                    <ChartBarIcon
+                        className="w-6 h-6 mr-3 cursor-pointer dark:stroke-white"
+                        onClick={() => setIsStatsModalOpen(true)}
+                    />
+                    <CogIcon
+                        className="w-6 h-6 mr-3 cursor-pointer dark:stroke-white"
+                        onClick={() => setIsSettingsModalOpen(true)}
+                    />
+                </div>
+                <p className="absolute flex items-center text-xl font-bold ml-center dark:text-white">
                     <span>
                         <a
                             href="https://discord.gg/kHvSC9WHzC"
@@ -44,17 +54,9 @@ export const Navbar = ({
                     <span>{GAME_TITLE}</span>
                 </p>
                 <div className="right-icons">
-                    <ChartBarIcon
-                        className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
-                        onClick={() => setIsStatsModalOpen(true)}
-                    />
                     <StarIcon
                         onClick={() => setIsRankingModalOpen(true)}
-                        className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
-                    />
-                    <CogIcon
-                        className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
-                        onClick={() => setIsSettingsModalOpen(true)}
+                        className="w-6 h-6 mr-3 cursor-pointer dark:stroke-white"
                     />
                     <TwitterButton />
                 </div>

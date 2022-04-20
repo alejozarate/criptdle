@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { BaseModal } from './BaseModal'
 
 import { getRanking, rankeredUser } from '../../lib/firebaseActions'
@@ -6,6 +6,8 @@ import {
     NEXT_PAGINATION_TEXT,
     PREVIOUS_PAGINATION_TEXT,
 } from '../../constants/strings'
+
+import { TwitterCtx } from '../../context/TwitterContext'
 
 type Props = {
     isOpen: boolean
@@ -19,6 +21,12 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
     const [page, setPage] = useState(1)
     const [renderedRanking, setRenderedRanking] = useState<rankeredUser[]>([])
     const [pageQty, setPageQty] = useState<Number>(1)
+
+    const context = useContext(TwitterCtx)
+
+    useEffect(() => {
+        context?.checkUserAuth()
+    }, [context])
 
     useEffect(() => {
         getRanking()
@@ -46,21 +54,37 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
             isOpen={isOpen}
             handleClose={handleClose}
         >
-            <div className="flex flex-col items-center mt-2">
+            <div className="flex flex-col items-center mt-2 dark:text-white">
                 <p className="mb-4">
-                    El score se determina por la cantidad de intentos en cada
-                    palabra del mes. A menor cantidad mejor posicion vas a
-                    tener. Para participar logueate con Twitter.
+                    El score se determina por la cantidad de intentos para
+                    adivinar cada palabra. A menor cantidad de intentos mejor
+                    puntaje, como si estuvieses jugando al Golf. Para participar
+                    tenés que{' '}
+                    <span
+                        onClick={context?.twitterSignIn}
+                        className={
+                            context?.authenticated
+                                ? 'underline'
+                                : 'underline cursor-pointer'
+                        }
+                    >
+                        loguearte con Twitter.
+                    </span>
                 </p>
                 <table className="w-full">
-                    <thead>
-                        <tr>
-                            <th className="text-blue-400 text-xl">Twitter</th>
-                            <th className="text-xl">Score</th>
-                            <th className="text-xl">Copinhas</th>
-                        </tr>
-                    </thead>
-
+                    {renderedRanking.length > 0 ? (
+                        <thead>
+                            <tr>
+                                <th className="text-xl text-blue-400">
+                                    Twitter
+                                </th>
+                                <th className="text-xl">Score</th>
+                                <th className="text-xl">Copinhas</th>
+                            </tr>
+                        </thead>
+                    ) : (
+                        ''
+                    )}
                     <tbody>
                         {renderedRanking.map((user) => (
                             <tr key={user.userId}>
@@ -75,7 +99,7 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
                     {ranking.length > MAX_QTY_USERS_PER_PAGE && (
                         <div className="grid grid-cols-2 mt-8">
                             <button
-                                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mr-4 col-start-1 col-end-2 disabled:opacity-75"
+                                className="col-start-1 col-end-2 px-2 py-1 mr-4 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 disabled:opacity-75"
                                 onClick={() => setPage(page - 1)}
                                 disabled={page === 1}
                             >
@@ -83,7 +107,7 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
                             </button>
 
                             <button
-                                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded col-start-2 col-end-3 disabled:opacity-75"
+                                className="col-start-2 col-end-3 px-2 py-1 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 disabled:opacity-75"
                                 onClick={() => setPage(page + 1)}
                                 disabled={page >= pageQty}
                             >
