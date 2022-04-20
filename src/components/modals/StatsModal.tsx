@@ -55,41 +55,43 @@ export const StatsModal = ({
     return (
         <BaseModal title={''} isOpen={isOpen} handleClose={handleClose}>
             <div className="items-center sm:flex">
-                <div className="flex flex-col space-beetwen">
-                    <div>
-                        <p className="mb-4 text-xl font-medium leading-6 text-gray-900 underline text-md dark:text-gray-100">
-                            {solution}
-                        </p>
-                        <p className="italic font-bold text-center text-gray-900 sm:px-1 text-md dark:text-gray-100">
-                            {WORDS_DESCRIPTION[solution.toLowerCase()]}*
-                        </p>
+                {(isGameLost || isGameWon) && (
+                    <div className="flex flex-col space-beetwen">
+                        <div>
+                            <p className="mb-4 text-xl font-medium leading-6 text-gray-900 underline text-md dark:text-gray-100">
+                                {solution}
+                            </p>
+                            <p className="italic font-bold text-center text-gray-900 sm:px-1 text-md dark:text-gray-100">
+                                {WORDS_DESCRIPTION[solution.toLowerCase()]}*
+                            </p>
+                        </div>
+                        <div className="mt-6">
+                            <small className="dark:text-white">
+                                * Muchas definiciones son de{' '}
+                                <a
+                                    href="https://www.defilatam.com/definiciones"
+                                    target="_blank"
+                                    className="underline outline-none"
+                                    rel="noreferrer"
+                                >
+                                    DeFi Latam
+                                </a>{' '}
+                            </small>
+                            <br />
+                            <small className="mb-4 outline-none dark:text-white">
+                                ** Para seguir aprendiendo de cripto sumate al{' '}
+                                <a
+                                    href="https://discord.com/invite/kHvSC9WHzC"
+                                    target="_blank"
+                                    className="underline"
+                                    rel="noreferrer"
+                                >
+                                    discord de Solow
+                                </a>
+                            </small>
+                        </div>
                     </div>
-                    <div className="mt-6">
-                        <small className="dark:text-white">
-                            * Las definiciones son de{' '}
-                            <a
-                                href="https://www.defilatam.com/definiciones"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="underline outline-none"
-                            >
-                                DeFi Latam
-                            </a>{' '}
-                        </small>
-                        <br />
-                        <small className="dark:text-white mb-4 outline-none">
-                            ** Para seguir aprendiendo de cripto sumate al{' '}
-                            <a
-                                href="https://discord.com/invite/kHvSC9WHzC"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="underline"
-                            >
-                                discord de Solow
-                            </a>
-                        </small>
-                    </div>
-                </div>
+                )}
                 <div>
                     <h3 className="font-medium leading-6 text-gray-900 text-md dark:text-gray-100">
                         {STATISTICS_TITLE}

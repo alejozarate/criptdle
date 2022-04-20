@@ -1,6 +1,6 @@
 import { getGuessStatuses } from './statuses'
 import { solutionIndex, unicodeSplit } from './words'
-import { GAME_TITLE } from '../constants/strings'
+import { GAME_TITLE, GAME_URL } from '../constants/strings'
 import { MAX_CHALLENGES } from '../constants/settings'
 import { UAParser } from 'ua-parser-js'
 
@@ -24,7 +24,8 @@ export const shareStatus = (
         generateEmojiGrid(
             guesses,
             getEmojiTiles(isDarkMode, isHighContrastMode)
-        )
+        ) +
+        `\n\n${GAME_URL}`
 
     const shareData = { text: textToShare }
 
