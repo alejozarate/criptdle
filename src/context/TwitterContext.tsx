@@ -8,6 +8,7 @@ import {
     deleteTwitterUserFromLocalStorage,
 } from '../lib/localStorage'
 import { postUserToDb } from '../lib/firebaseActions'
+import { useAlert } from './AlertContext'
 
 interface AppContextInterface {
     authenticated: boolean
@@ -31,6 +32,9 @@ export const TwitterProvider = ({ children }: Props) => {
     const [authenticated, setAuthenticated] = useState<boolean>(false)
     const [username, setUsername] = useState<string | null>('')
 
+    const { showError: showErrorAlert, showSuccess: showSuccessAlert } =
+        useAlert()
+
     const twitterSignIn = () => {
         if (authenticated) return
 
@@ -41,7 +45,9 @@ export const TwitterProvider = ({ children }: Props) => {
                 checkUserAuth()
             })
             .catch((err) => {
-                alert(`Error al iniciar sesión con Twitter ${err}`)
+                showErrorAlert(
+                    `Ups, que vergüenza. Hubo un error iniciando sesión con Twitter.`
+                )
             })
     }
 
@@ -53,7 +59,9 @@ export const TwitterProvider = ({ children }: Props) => {
                 deleteTwitterUserFromLocalStorage()
             })
             .catch((err) => {
-                alert(err)
+                showErrorAlert(
+                    `Ups, que vergüenza. Hubo un error cerrando tu sesión con Twitter.`
+                )
             })
     }
 

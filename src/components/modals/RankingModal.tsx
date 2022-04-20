@@ -58,18 +58,20 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
                 <p className="mb-4">
                     El score se determina por la cantidad de intentos para
                     adivinar cada palabra. A menor cantidad de intentos mejor
-                    puntaje, como si estuvieses jugando al Golf. Para participar
-                    tenés que{' '}
-                    <span
-                        onClick={context?.twitterSignIn}
-                        className={
-                            context?.authenticated
-                                ? 'underline'
-                                : 'underline cursor-pointer'
-                        }
-                    >
-                        loguearte con Twitter.
-                    </span>
+                    puntaje, como si estuvieses jugando al Golf.{' '}
+                    {context?.authenticated ? (
+                        ''
+                    ) : (
+                        <span>
+                            Para participar tenés que{' '}
+                            <span
+                                onClick={context?.twitterSignIn}
+                                className={'underline cursor-pointer'}
+                            >
+                                loguearte con Twitter.
+                            </span>
+                        </span>
+                    )}
                 </p>
                 <table className="w-full">
                     {renderedRanking.length > 0 ? (
