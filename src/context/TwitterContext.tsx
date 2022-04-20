@@ -9,6 +9,7 @@ import {
 } from '../lib/localStorage'
 import { postUserToDb } from '../lib/firebaseActions'
 import { useAlert } from './AlertContext'
+import { MAX_WORD_LENGTH, REVEAL_TIME_MS } from '../constants/settings'
 
 interface AppContextInterface {
     authenticated: boolean
@@ -32,8 +33,7 @@ export const TwitterProvider = ({ children }: Props) => {
     const [authenticated, setAuthenticated] = useState<boolean>(false)
     const [username, setUsername] = useState<string | null>('')
 
-    const { showError: showErrorAlert, showSuccess: showSuccessAlert } =
-        useAlert()
+    const { showError: showErrorAlert } = useAlert()
 
     const twitterSignIn = () => {
         if (authenticated) return
@@ -46,7 +46,7 @@ export const TwitterProvider = ({ children }: Props) => {
             })
             .catch((err) => {
                 showErrorAlert(
-                    `Ups, que vergüenza. Hubo un error iniciando sesión con Twitter.`
+                    `Ups, que vergüenza para la Web2. Hubo un error iniciando sesión con Twitter.`
                 )
             })
     }
@@ -60,7 +60,7 @@ export const TwitterProvider = ({ children }: Props) => {
             })
             .catch((err) => {
                 showErrorAlert(
-                    `Ups, que vergüenza. Hubo un error cerrando tu sesión con Twitter.`
+                    `Ups, que vergüenza para la Web2. Hubo un error cerrando tu sesión con Twitter.`
                 )
             })
     }

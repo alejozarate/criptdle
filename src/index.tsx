@@ -8,11 +8,11 @@ import { TwitterProvider } from './context/TwitterContext'
 
 ReactDOM.render(
     <React.StrictMode>
-        <TwitterProvider>
-            <AlertProvider>
+        <AlertProvider>
+            <TwitterProvider>
                 <App />
-            </AlertProvider>
-        </TwitterProvider>
+            </TwitterProvider>
+        </AlertProvider>
     </React.StrictMode>,
     document.getElementById('root')
 )
