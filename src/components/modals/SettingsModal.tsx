@@ -3,6 +3,7 @@ import { SettingsToggle } from './SettingsToggle'
 import {
     HARD_MODE_DESCRIPTION,
     HIGH_CONTRAST_MODE_DESCRIPTION,
+    TWITTER_ACCOUNT_DESCRIPTION,
 } from '../../constants/strings'
 
 type Props = {
@@ -14,6 +15,8 @@ type Props = {
     handleDarkMode: Function
     isHighContrastMode: boolean
     handleHighContrastMode: Function
+    isTwitterEnabled: boolean
+    handleTwitterUser: Function
 }
 
 export const SettingsModal = ({
@@ -25,6 +28,8 @@ export const SettingsModal = ({
     handleDarkMode,
     isHighContrastMode,
     handleHighContrastMode,
+    isTwitterEnabled,
+    handleTwitterUser,
 }: Props) => {
     return (
         <BaseModal
@@ -49,6 +54,12 @@ export const SettingsModal = ({
                     flag={isHighContrastMode}
                     handleFlag={handleHighContrastMode}
                     description={HIGH_CONTRAST_MODE_DESCRIPTION}
+                />
+                <SettingsToggle
+                    settingName="Twitter linkeado"
+                    flag={isTwitterEnabled}
+                    handleFlag={handleTwitterUser}
+                    description={TWITTER_ACCOUNT_DESCRIPTION}
                 />
             </div>
         </BaseModal>

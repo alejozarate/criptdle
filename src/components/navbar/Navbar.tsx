@@ -2,32 +2,46 @@ import {
     ChartBarIcon,
     CogIcon,
     InformationCircleIcon,
+    StarIcon,
 } from '@heroicons/react/outline'
 import { GAME_TITLE } from '../../constants/strings'
+import TwitterButton from '../authentication/TwitterButton'
 
 type Props = {
     setIsInfoModalOpen: (value: boolean) => void
     setIsStatsModalOpen: (value: boolean) => void
+    setIsRankingModalOpen: (value: boolean) => void
     setIsSettingsModalOpen: (value: boolean) => void
 }
 
 export const Navbar = ({
     setIsInfoModalOpen,
     setIsStatsModalOpen,
+    setIsRankingModalOpen,
     setIsSettingsModalOpen,
 }: Props) => {
     return (
         <div className="navbar">
-            <div className="navbar-content px-5">
-                <InformationCircleIcon
-                    className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
-                    onClick={() => setIsInfoModalOpen(true)}
-                />
-                <p className="text-xl ml-2.5 font-bold dark:text-white flex items-center">
+            <div className="px-5 navbar-content">
+                <div className="flex">
+                    <InformationCircleIcon
+                        className="w-6 h-6 mr-2 cursor-pointer dark:stroke-white"
+                        onClick={() => setIsInfoModalOpen(true)}
+                    />
+                    <ChartBarIcon
+                        className="w-6 h-6 mr-3 cursor-pointer dark:stroke-white"
+                        onClick={() => setIsStatsModalOpen(true)}
+                    />
+                    <CogIcon
+                        className="w-6 h-6 mr-3 cursor-pointer dark:stroke-white"
+                        onClick={() => setIsSettingsModalOpen(true)}
+                    />
+                </div>
+                <p className="absolute flex items-center text-xl font-bold ml-center dark:text-white">
                     <span>
                         <a
                             href="https://discord.gg/kHvSC9WHzC"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                             target="_blank"
                         >
                             <img
@@ -40,14 +54,11 @@ export const Navbar = ({
                     <span>{GAME_TITLE}</span>
                 </p>
                 <div className="right-icons">
-                    <ChartBarIcon
-                        className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
-                        onClick={() => setIsStatsModalOpen(true)}
+                    <StarIcon
+                        onClick={() => setIsRankingModalOpen(true)}
+                        className="w-6 h-6 mr-3 cursor-pointer dark:stroke-white"
                     />
-                    <CogIcon
-                        className="h-6 w-6 cursor-pointer dark:stroke-white"
-                        onClick={() => setIsSettingsModalOpen(true)}
-                    />
+                    <TwitterButton />
                 </div>
             </div>
             <hr></hr>
