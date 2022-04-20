@@ -64,7 +64,7 @@ export const TwitterProvider = ({ children }: Props) => {
             setUsername(displayName)
             postUserToDb({ displayName, uid })
         } else {
-            alert('Usuario no autenticado, intente nuevamente')
+            console.log('Usuario no autenticado, intente nuevamente')
         }
     }
 
