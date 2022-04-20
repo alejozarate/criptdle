@@ -13,6 +13,7 @@ import {
     WORD_NOT_FOUND_MESSAGE,
     CORRECT_WORD_MESSAGE,
     HARD_MODE_ALERT_MESSAGE,
+    GAME_TITLE,
 } from './constants/strings'
 import {
     MAX_WORD_LENGTH,
@@ -283,6 +284,24 @@ function App() {
                 setIsRankingModalOpen={setIsRankingModalOpen}
                 setIsSettingsModalOpen={setIsSettingsModalOpen}
             />
+            <p className="items-center mb-4 text-xl font-bold text-center sm:hidden dark:text-white">
+                <div className="flex justify-center">
+                    <span>
+                        <a
+                            href="https://discord.gg/kHvSC9WHzC"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            <img
+                                src="./solow.png"
+                                alt="Solow"
+                                className="sLogo"
+                            />
+                        </a>
+                    </span>
+                    <span>{GAME_TITLE}</span>
+                </div>
+            </p>
             <p className="text-center dark:text-white navbar">
                 ¿Cuál es la palabra cripto de hoy?
             </p>

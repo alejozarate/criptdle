@@ -37,7 +37,7 @@ export const Navbar = ({
                         onClick={() => setIsSettingsModalOpen(true)}
                     />
                 </div>
-                <p className="absolute flex items-center text-xl font-bold ml-center dark:text-white">
+                <p className="absolute items-center hidden text-xl font-bold sm:flex ml-center dark:text-white">
                     <span>
                         <a
                             href="https://discord.gg/kHvSC9WHzC"
