@@ -21,7 +21,6 @@ export const WORDS = [
     'ath',
     'maker',
     'dos',
-    'ama',
     'aml',
     'amm',
     'apr',
