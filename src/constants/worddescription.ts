@@ -71,7 +71,7 @@ export const WORDS_DESCRIPTION: StringMap = {
     scam: 'Una estafa. Existen numerosos tipos de estafa en el mundo cripto, por lo que hay que estar atento y prestar mucha atención a la seguridad.',
     seed: "La seed o seed phrase o frase semilla es una frase de 12 o 24 palabras que te permite recuperar tus criptomonedas desde cualquier wallet. Son como la 'llave maestra' para tener el control de tus cripto. ",
     shard: 'El sharding es una técnica informática por la cual se busca dividir una base de datos o red para hacer que su funcionamiento sea mucho más escalable y descentralizado.',
-    shill: 'Forma descontralada, excedida y con elevado contenido dramático con la que se promociona una moneda o producto. Shillear algo es hablar publicamente bien de algo.',
+    shill: 'Forma descontralada, excedida y con elevado contenido dramático con la que se promociona una moneda o producto. Shillear algo es hablar públicamente bien de algo.',
     solow: 'Una comunidad para que aprender de cripto sea fácil, con cursos gratis y divertidos y un montón de gente dispuesta a ayudar.',
     stake: "Hacer staking significa depositar tus criptomonedas en un contrato inteligente para obtener un interés. El staking es considerado el 'plazo fijo' de cripto.",
     swap: "La palabra 'Swap' significa 'Intercambio'. En general se usa para referirse a swaps descentralizados, a través de plataformas como Uniswap. Un swap cripto es un intercambio de tokens.",
