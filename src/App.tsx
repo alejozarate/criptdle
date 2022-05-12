@@ -108,7 +108,6 @@ function App() {
                 setIsInfoModalOpen(true)
             }, WELCOME_INFO_MODAL_MS)
         }
-        console.log(stats)
     }, [])
 
     useEffect(() => {
@@ -284,7 +283,7 @@ function App() {
                 setIsRankingModalOpen={setIsRankingModalOpen}
                 setIsSettingsModalOpen={setIsSettingsModalOpen}
             />
-            <p className="items-center mb-4 text-xl font-bold text-center sm:hidden dark:text-white">
+            <div className="items-center mb-4 text-xl font-bold text-center sm:hidden dark:text-white">
                 <div className="flex justify-center">
                     <span>
                         <a
@@ -301,7 +300,7 @@ function App() {
                     </span>
                     <span>{GAME_TITLE}</span>
                 </div>
-            </p>
+            </div>
             <p className="text-center dark:text-white navbar">
                 ¿Cuál es la palabra cripto de hoy?
             </p>
