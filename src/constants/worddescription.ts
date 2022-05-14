@@ -97,4 +97,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     quema: 'Es la eliminación de un número determinado de tokens por parte el equipo desarrollador de un proyecto concreto. Todos los tokens quemados dejan automáticamente de funcionar y tener valor.',
     api: 'API: (Application Programming Interface) Es un software que actúa como intermediario o puente y permite a dos aplicaciones que se comuniquen entre ellas',
     nakamoto: 'Apellido del pseudónimo de la ente creadora de Bitcoin',
+    phantom:
+        'Software que se instala como extensión del navegador web y actua como billetera virtual en la blockchain de Solana.',
 }
