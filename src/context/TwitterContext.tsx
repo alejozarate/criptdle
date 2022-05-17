@@ -9,7 +9,7 @@ import {
 } from '../lib/localStorage'
 import { postUserToDb } from '../lib/firebaseActions'
 import { useAlert } from './AlertContext'
-import { MAX_WORD_LENGTH, REVEAL_TIME_MS } from '../constants/settings'
+//import { MAX_WORD_LENGTH, REVEAL_TIME_MS } from '../constants/settings'
 
 interface AppContextInterface {
     authenticated: boolean

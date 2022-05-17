@@ -99,4 +99,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     nakamoto: 'Apellido del pseudónimo de la ente creadora de Bitcoin',
     phantom:
         'Software que se instala como extensión del navegador web y actua como billetera virtual en la blockchain de Solana.',
+    fungible:
+        'La fungibilidad es una característica típica del dinero. Un bien es fungible cuando es intercambiable por otro bien igual. Por ejemplo, un billete de 100 pesos es igual a cualquier otro billete de 100 pesos y no hay diferencia. Un bitcoin es igual a cualquier otro bitcoin.',
 }
