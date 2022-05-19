@@ -47,6 +47,8 @@ export const WORDS = [
     //'bull',
     'cbdc',
     'cefi',
+    'rollup',
+    'sybil',
     'cex',
     'claim',
     'dai',
@@ -77,7 +79,6 @@ export const WORDS = [
     'scam',
     'stake',
     'swap',
-    'sybil',
     'terra',
     'token',
     'trade',
@@ -95,5 +96,4 @@ export const WORDS = [
     'block',
     'chain',
     'quema',
-    'api',
 ]
