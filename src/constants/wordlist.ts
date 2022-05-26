@@ -53,7 +53,7 @@ export const WORDS = [
     'claim',
     'dai',
     'dao',
-    'dos',
+    'faucet',
     'defi',
     'dex',
     'dex',

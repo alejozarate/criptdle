@@ -102,4 +102,5 @@ export const WORDS_DESCRIPTION: StringMap = {
     fungible:
         'La fungibilidad es una característica típica del dinero. Un bien es fungible cuando es intercambiable por otro bien igual. Por ejemplo, un billete de 100 pesos es igual a cualquier otro billete de 100 pesos y no hay diferencia. Un bitcoin es igual a cualquier otro bitcoin.',
     rollup: 'Agrupa cientos de transacciones en una, en la layer 1. Esto distribuye la fee entre todos los que participan, haciendoló más económico para cada usuario. Aunque Las transacciones se ejecutan fuera, los datos de la transacción se publican en la layer 1, lo que hace que herede la seguridad de Ethereum. Dos enfoques de los rollups son la optimistic and zero-knowledge.',
+    faucet: 'Las faucets son servicios que proporciona tokens gratuitos a los usuarios de redes de prueba (testnet). Los tokens permiten a los usuarios experimentar con diferentes características de las blockchains sin gastar ETH en la mainnet.',
 }
