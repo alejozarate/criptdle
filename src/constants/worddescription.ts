@@ -104,4 +104,5 @@ export const WORDS_DESCRIPTION: StringMap = {
     rollup: 'Agrupa cientos de transacciones en una, en la layer 1. Esto distribuye la fee entre todos los que participan, haciendoló más económico para cada usuario. Aunque Las transacciones se ejecutan fuera, los datos de la transacción se publican en la layer 1, lo que hace que herede la seguridad de Ethereum. Dos enfoques de los rollups son la optimistic and zero-knowledge.',
     faucet: 'Las faucets son servicios que proporciona tokens gratuitos a los usuarios de redes de prueba (testnet). Los tokens permiten a los usuarios experimentar con diferentes características de las blockchains sin gastar ETH en la mainnet.',
     subnet: 'Es un conjunto dinámico de validadores que trabajan para lograr un consenso sobre el estado de un conjunto de cadenas de bloques en la Red de Avalanche.',
+    casper: 'Se trata de un algoritmo diseñado específicamente para ayudar a Ethereum en su migración de Prueba de Trabajo (PoW) a Prueba de Participación (PoS). Su funcionalidad principal es aplicar una prueba de participación cada 100 transacciones para evaluar progresivamente el desempeño de los parámetros de trabajo.',
 }
