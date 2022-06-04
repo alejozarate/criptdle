@@ -110,4 +110,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     leverage:
         'Es el uso de multiplicadores en mercados que permiten las operaciones con apalancamiento, de manera que un depósito de 1 BTC podría proporcionar el poder de inversión de 10 a 100 BTC si se utiliza con un apalancamiento de 10x a 100x. Las operaciones con apalancamiento pueden amplificar mucho las ganancias. Sin embargo, si la operación no es rentable, también puede amplificar mucho las pérdidas. La desventaja de este arriesgado enfoque es que todo el depósito, 1 BTC en este ejemplo, podría perderse en un evento de liquidación. Podría resultar en la pérdida de todo el depósito en tiempos de volatilidad masiva y fondos de reserva insuficientes.',
     finney: 'Hal Finney es un reconocido criptógrafo, para muchos la persona detrás de Satoshi Nakamonto. Fue el primero en correr Bitcoin (lo publicó en un tweet que se hizo célebre) y participaba activamente de los grupos de cypherpunks y criptografía online.',
+    contrato:
+        'Un contrato inteligente es un programa de computación ejecutado sobre una blockchain. Son transparentes e inmutables.',
 }
