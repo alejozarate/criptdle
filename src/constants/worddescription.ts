@@ -112,4 +112,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     finney: 'Hal Finney es un reconocido criptógrafo, para muchos la persona detrás de Satoshi Nakamonto. Fue el primero en correr Bitcoin (lo publicó en un tweet que se hizo célebre) y participaba activamente de los grupos de cypherpunks y criptografía online.',
     contrato:
         'Un contrato inteligente es un programa de computación ejecutado sobre una blockchain. Son transparentes e inmutables.',
+    alchemix:
+        'Es un protocolo de préstamos que "se pagan solos". Permite que los activos depositados como colateral generen intereses mientras dura el préstamo, permitiendo que la deuda se reduzca de a poco. Funciona en Ethereum.',
 }
