@@ -114,4 +114,6 @@ export const WORDS_DESCRIPTION: StringMap = {
         'Un contrato inteligente es un programa de computación ejecutado sobre una blockchain. Son transparentes e inmutables.',
     alchemix:
         'Es un protocolo de préstamos que "se pagan solos". Permite que los activos depositados como colateral generen intereses mientras dura el préstamo, permitiendo que la deuda se reduzca de a poco. Funciona en Ethereum.',
+    ethlatam:
+        'Un evento de 4 días centrado en la tecnología y la comunidad que tendrá lugar en Buenos Aires del 11 al 14 de agosto de 2022, con conferencias y networking con una de las comunidades de ETH más vibrantes del mundo: discord.gg/ethlatam ',
 }
