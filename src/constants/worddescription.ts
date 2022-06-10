@@ -117,4 +117,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     ethlatam:
         'Un evento de 4 días centrado en la tecnología y la comunidad que tendrá lugar en Buenos Aires del 11 al 14 de agosto de 2022, con conferencias y networking con una de las comunidades de ETH más vibrantes del mundo: discord.gg/ethlatam ',
     aurora: 'Es una blockchain EVM que depende directamente de la blockchain de NEAR; sirve como puente entre ambos ecosistemas.',
+    inmutable:
+        'Un contrato inteligente es inmutable; una vez que se activa un contrato es imposible modificar sus condiciones. Es una característica clave para generar confianza en el ecosistema cripto; uno puede confiar en que las condiciones no van a cambiar.',
 }
