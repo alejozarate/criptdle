@@ -119,4 +119,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     aurora: 'Es una blockchain EVM que depende directamente de la blockchain de NEAR; sirve como puente entre ambos ecosistemas.',
     inmutable:
         'Un contrato inteligente es inmutable; una vez que se activa un contrato es imposible modificar sus condiciones. Es una característica clave para generar confianza en el ecosistema cripto; uno puede confiar en que las condiciones no van a cambiar.',
+    tokenomics:
+        'Economia de tokens - se refiere a entender la oferta y la demanda de los mismos, para la toma de decisiones',
 }
