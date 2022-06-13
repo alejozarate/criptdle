@@ -121,4 +121,7 @@ export const WORDS_DESCRIPTION: StringMap = {
         'Un contrato inteligente es inmutable; una vez que se activa un contrato es imposible modificar sus condiciones. Es una característica clave para generar confianza en el ecosistema cripto; uno puede confiar en que las condiciones no van a cambiar.',
     tokenomics:
         'Economia de tokens - se refiere a entender la oferta y la demanda de los mismos, para la toma de decisiones',
+    altseason:
+        '(Temporada de altcoins, en español). Hace referencia a la parte del ciclo general del mercado cripto en la que muchas altcoins suben rápidamente de precio frente al dólar y a Bitcoin a la vez.',
+    bridge: '(Del inglés Puente) es un servicio que permite la transferencia de activos digitales de una blockchain a otra. Estos puentes pueden ser parte integral de una blockchain (ejemplo, Polygon PoS Bridge), estar dedicados a la acuñación de determinados activos (Ejemplo, Ren Bridge) u ofreciendo liquidez en dos o más redes como un servicio de terceros (ejemplo, Hop Protocol). A su vez, pueden operar de forma centralizada o descentralizada.',
 }
