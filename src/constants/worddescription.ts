@@ -124,4 +124,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     altseason:
         '(Temporada de altcoins, en español). Hace referencia a la parte del ciclo general del mercado cripto en la que muchas altcoins suben rápidamente de precio frente al dólar y a Bitcoin a la vez.',
     bridge: '(Del inglés Puente) es un servicio que permite la transferencia de activos digitales de una blockchain a otra. Estos puentes pueden ser parte integral de una blockchain (ejemplo, Polygon PoS Bridge), estar dedicados a la acuñación de determinados activos (Ejemplo, Ren Bridge) u ofreciendo liquidez en dos o más redes como un servicio de terceros (ejemplo, Hop Protocol). A su vez, pueden operar de forma centralizada o descentralizada.',
+    presale:
+        'Es la preventa de un token o un NFT. Acceder a una "presale" generalmente implica poder comprar a precio de descuento antes que lance.',
 }
