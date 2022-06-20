@@ -126,4 +126,5 @@ export const WORDS_DESCRIPTION: StringMap = {
     bridge: '(Del inglés Puente) es un servicio que permite la transferencia de activos digitales de una blockchain a otra. Estos puentes pueden ser parte integral de una blockchain (ejemplo, Polygon PoS Bridge), estar dedicados a la acuñación de determinados activos (Ejemplo, Ren Bridge) u ofreciendo liquidez en dos o más redes como un servicio de terceros (ejemplo, Hop Protocol). A su vez, pueden operar de forma centralizada o descentralizada.',
     presale:
         'Es la preventa de un token o un NFT. Acceder a una "presale" generalmente implica poder comprar a precio de descuento antes que lance.',
+    wagmam: '#WAGMAM = We Are Gonna Make A Movie. "The Infinite Machine", el libro de referencia sobre la historia de cómo se creó Ethereum, se está convirtiendo en una película financiada por la comunidad de Ethereum, utilizando le tecnología de Ethereum. Community power at its best - Ft. @0xPumbi @g_carulla',
 }
