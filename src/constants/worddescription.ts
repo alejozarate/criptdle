@@ -127,4 +127,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     presale:
         'Es la preventa de un token o un NFT. Acceder a una "presale" generalmente implica poder comprar a precio de descuento antes que lance.',
     wagmam: '#WAGMAM = We Are Gonna Make A Movie. "The Infinite Machine", el libro de referencia sobre la historia de cómo se creó Ethereum, se está convirtiendo en una película financiada por la comunidad de Ethereum, utilizando le tecnología de Ethereum. Community power at its best - Ft. @0xPumbi @g_carulla',
+    relaychain:
+        'La cadena que coordina el consenso y la comunicación entre las parachain (también con las cadenas externas mediante los puentes). Pertenece tanto a la red de Polkadot como a la de Kusma.',
 }
