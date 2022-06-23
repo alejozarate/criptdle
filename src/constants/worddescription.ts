@@ -129,4 +129,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     wagmam: '#WAGMAM = We Are Gonna Make A Movie. "The Infinite Machine", el libro de referencia sobre la historia de cómo se creó Ethereum, se está convirtiendo en una película financiada por la comunidad de Ethereum, utilizando le tecnología de Ethereum. Community power at its best - Ft. @0xPumbi @g_carulla',
     relaychain:
         'La cadena que coordina el consenso y la comunicación entre las parachain (también con las cadenas externas mediante los puentes). Pertenece tanto a la red de Polkadot como a la de Kusma.',
+    multisig:
+        'Una wallet multisig es una wallet que requiere muchas firmas para ejecutar una transacción. Las DAOs las usan para garantizar que ningún miembro pueda mover fondos de forma unilateral. Es una opción para gestionar dinero entre varias personas, o para dar una capa de seguridad extra a una dirección.',
 }
