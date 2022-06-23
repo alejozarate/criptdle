@@ -131,4 +131,6 @@ export const WORDS_DESCRIPTION: StringMap = {
         'La cadena que coordina el consenso y la comunicación entre las parachain (también con las cadenas externas mediante los puentes). Pertenece tanto a la red de Polkadot como a la de Kusma.',
     multisig:
         'Una wallet multisig es una wallet que requiere muchas firmas para ejecutar una transacción. Las DAOs las usan para garantizar que ningún miembro pueda mover fondos de forma unilateral. Es una opción para gestionar dinero entre varias personas, o para dar una capa de seguridad extra a una dirección.',
+    grandpa:
+        'GRANDPA: GHOST-based Recursive Ancestor Deriving Prefix Agreement. Polkadot y Kusama tienen un modelo de consenso híbrido que divide las responsabilidades del consenso en dos módulos diferentes: GRANDPA, que es el módulo de finalidad y BABE (Blind Assignment for Blockchain Extension), que es el módulo de producción de bloques.',
 }
