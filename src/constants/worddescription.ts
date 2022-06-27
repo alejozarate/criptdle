@@ -133,4 +133,8 @@ export const WORDS_DESCRIPTION: StringMap = {
         'Una wallet multisig es una wallet que requiere muchas firmas para ejecutar una transacción. Las DAOs las usan para garantizar que ningún miembro pueda mover fondos de forma unilateral. Es una opción para gestionar dinero entre varias personas, o para dar una capa de seguridad extra a una dirección.',
     grandpa:
         'GRANDPA: GHOST-based Recursive Ancestor Deriving Prefix Agreement. Polkadot y Kusama tienen un modelo de consenso híbrido que divide las responsabilidades del consenso en dos módulos diferentes: GRANDPA, que es el módulo de finalidad y BABE (Blind Assignment for Blockchain Extension), que es el módulo de producción de bloques. No olvides que hoy a las 18.30 (ARG) hay copinha C.R.I.P.T.O sobre Polkadot en Solow: https://discord.gg/75Pns9YGfU',
+    metaverso:
+        'El termino viene de una novela llamada "Snow Crash" del autor Neal Stephenson. Es una realidad virtual donde se puede tener un avatar customizado y donde podemos interactuar con otros, creando cosas que no siempre se pueden hacer en el mundo real. Algunos ejemplos son The sandbox y descentraland',
+    defillama:
+        'Es una página web donde encontrar un montón de información sobre blockchains y proyectos. Muestra cuanto dinero hay invertido y que volúmen se maneja. Es muy útil para hacer research.',
 }
