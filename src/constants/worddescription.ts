@@ -138,4 +138,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     defillama:
         'Es una página web donde encontrar un montón de información sobre blockchains y proyectos. Muestra cuanto dinero hay invertido y que volúmen se maneja. Es muy útil para hacer research.',
     zksync: 'Es una solución de escalabilidad que usa ZK rollups para aumentar la cantidad de transacciones procesadas por una red. Funciona para escalar Ethereum, ejecutando transacciones por fuera y enviando una Zero Knowledge proof a la red principal.',
+    criptdle:
+        'Emm, bueno, cómo decirlo... Un gran juego para aprender sobre cripto.',
 }
