@@ -137,4 +137,5 @@ export const WORDS_DESCRIPTION: StringMap = {
         'El termino viene de una novela llamada "Snow Crash" del autor Neal Stephenson. Es una realidad virtual donde se puede tener un avatar customizado y donde podemos interactuar con otros, creando cosas que no siempre se pueden hacer en el mundo real. Algunos ejemplos son The sandbox y descentraland',
     defillama:
         'Es una página web donde encontrar un montón de información sobre blockchains y proyectos. Muestra cuanto dinero hay invertido y que volúmen se maneja. Es muy útil para hacer research.',
+    zksync: 'Es una solución de escalabilidad que usa ZK rollups para aumentar la cantidad de transacciones procesadas por una red. Funciona para escalar Ethereum, ejecutando transacciones por fuera y enviando una Zero Knowledge proof a la red principal.',
 }
