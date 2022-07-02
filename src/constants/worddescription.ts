@@ -142,4 +142,6 @@ export const WORDS_DESCRIPTION: StringMap = {
         'Emm, bueno, cómo decirlo... Un gran juego para aprender sobre cripto.',
     parachain:
         'Es un shard asegurado por la Relay Chain, ya sea en la red Polkadot o Kusama. A diferencia de otros modelos de blockchains con shards, cada diseño de parachain es propuesto por terceros proyectos que deberán salir a competir por un slot en las subastas para optar por un lugar en la red como parachain activa.',
+    defiant:
+        'Defiant es una wallet self-custodial argentina que permite a los usuarios acceder a varias redes y criptomonedas desde su celular. ',
 }
