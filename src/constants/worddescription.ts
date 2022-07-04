@@ -144,4 +144,6 @@ export const WORDS_DESCRIPTION: StringMap = {
         'Es un shard asegurado por la Relay Chain, ya sea en la red Polkadot o Kusama. A diferencia de otros modelos de blockchains con shards, cada diseño de parachain es propuesto por terceros proyectos que deberán salir a competir por un slot en las subastas para optar por un lugar en la red como parachain activa.',
     defiant:
         'Defiant es una wallet self-custodial argentina que permite a los usuarios acceder a varias redes y criptomonedas desde su celular. ',
+    pancake:
+        'Es el AMM de Binance Smart Chain. Se convirtió en un protocolo icónico a partir del crecimiento de su token CAKE durante los primeros meses de 2021. Pancake fue la puerta de entrada a cripto para mucha gente que no podía pagar los gas fees en Ethereum.',
 }
