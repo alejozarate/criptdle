@@ -146,4 +146,6 @@ export const WORDS_DESCRIPTION: StringMap = {
         'Defiant es una wallet self-custodial argentina que permite a los usuarios acceder a varias redes y criptomonedas desde su celular. ',
     pancake:
         'Es el AMM de Binance Smart Chain. Se convirtió en un protocolo icónico a partir del crecimiento de su token CAKE durante los primeros meses de 2021. Pancake fue la puerta de entrada a cripto para mucha gente que no podía pagar los gas fees en Ethereum.',
+    mainnet:
+        'La mainnet es la red oficial de una blockchain. Los proyectos cripto hacen numerosos tests en redes de prueba antes de lanzar en "mainnet".',
 }
