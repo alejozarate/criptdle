@@ -116,11 +116,12 @@ export const WORDS = [
     'pancake',
     'mainnet',
     'shilling',
+    'vesting',
     //'doge',
     //'sushi',
     //'merge',
     //'clave',
     //'block',
     //'chain',
-    'quema',
+    //'quema',
 ]

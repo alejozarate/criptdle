@@ -150,4 +150,6 @@ export const WORDS_DESCRIPTION: StringMap = {
         'La mainnet es la red oficial de una blockchain. Los proyectos cripto hacen numerosos tests en redes de prueba antes de lanzar en "mainnet".',
     shilling:
         'En el mundo crypto, shillear es el acto de promocionar una criptomoneda o token para fomentar su compra, o un protocolo para motivar su uso. El shilling es la estrategia de facto de los "crypto-influencers" para invitar a su audiencia a comprar determinados activos que de antemano ellos ya han adquirido e incrementar el valor de sus portafolios.',
+    vesting:
+        'Es la liberación progresiva de tokens a inversores o miembros del equipo a lo largo de un periodo de tiempo. Su objetivo es entregar los tokens de manera tal que no afecten fuertemente en el precio en etapas tempranas una vez que sea liberados. Además, para los miembros del equipo sirve como incentivo o motivación futura para seguir trabajando en el proyecto y por lo tanto el valor de sus futuros tokens no disminuya.',
 }
