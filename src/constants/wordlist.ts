@@ -1,5 +1,6 @@
 export const WORDS = [
-    'aave',
+    //'aave',
+    'validador',
     'bip',
     'solow',
     'peg',
