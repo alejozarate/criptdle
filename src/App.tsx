@@ -320,6 +320,15 @@ function App() {
                     guesses={guesses}
                     isRevealing={isRevealing}
                 />
+                <a
+                    href="https://proposals.criptdle.com"
+                    rel="noreferrer"
+                    target={'_blank'}
+                >
+                    <p className="text-white mt-6 text-center underline">
+                        Criptdle ahora acepta Proposals
+                    </p>
+                </a>
                 <InfoModal
                     isOpen={isInfoModalOpen}
                     handleClose={() => setIsInfoModalOpen(false)}
