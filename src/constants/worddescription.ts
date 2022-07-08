@@ -154,4 +154,8 @@ export const WORDS_DESCRIPTION: StringMap = {
         'Es la liberación progresiva de tokens a inversores o miembros del equipo a lo largo de un periodo de tiempo. Su objetivo es entregar los tokens de manera tal que no afecten fuertemente en el precio en etapas tempranas una vez que sea liberados. Además, para los miembros del equipo sirve como incentivo o motivación futura para seguir trabajando en el proyecto y por lo tanto el valor de sus futuros tokens no disminuya.',
     validador:
         'Son los nodos que se encargan de validar los bloques generados con Proof of Stake, reciben intereses.',
+    arbitraje:
+        'Diferencia de precios entre dos mercados o plataformas diferentes para el mismo activo, utilizada a favor para obtener beneficios. En DeFi, el yield farming automatizado utiliza estrategias de arbitraje algorítmico para maximizar los rendimientos para los inversores. Estas estrategias de arbitraje pueden incluir la compra, la venta, el préstamo y/o la provisión de liquidez de uno o más activos digitales a traves de diferentes mercados.',
+    oraculo:
+        'Se trata de una fuente de datos, como los precios actuales del mercado de activos, que proporciona un servicio de alta confianza a los usuarios y a otros servicios de que la fuente y el detalle de los datos del oráculo son oportunos, precisos y no manipulados. Las fuentes de datos pueden ser singulares o descentralizadas y pueden estar dispersas geográficamente entre sí. Todos los mercados requieren información precisa y oportuna para funcionar correctamente con una alta eficiencia. Un ejemplo del protocolo de oráculo más conocido es Chainlink (LINK).',
 }
