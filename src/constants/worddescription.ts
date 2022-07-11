@@ -160,4 +160,5 @@ export const WORDS_DESCRIPTION: StringMap = {
         'Se trata de una fuente de datos, como los precios actuales del mercado de activos, que proporciona un servicio de alta confianza a los usuarios y a otros servicios de que la fuente y el detalle de los datos del oráculo son oportunos, precisos y no manipulados. Las fuentes de datos pueden ser singulares o descentralizadas y pueden estar dispersas geográficamente entre sí. Todos los mercados requieren información precisa y oportuna para funcionar correctamente con una alta eficiencia. Un ejemplo del protocolo de oráculo más conocido es Chainlink (LINK).',
     roadmap:
         'Plan a seguir a largo y corto plazo de un projecto dado, con distintas metas a cumplir con el pasar del tiempo.',
+    trezor: 'Una de las cold wallets (billeteras frias) mas conocidas por su seguridad y prestaciones. Permite dar una mayor cuidado a las transacciones que se realizan y las monedas que se guardan',
 }
