@@ -326,7 +326,7 @@ function App() {
                     target={'_blank'}
                 >
                     <p className="text-white mt-6 text-center underline">
-                        Criptdle ahora acepta Proposals
+                        Proponé tu palabra para el Criptdle
                     </p>
                 </a>
                 <InfoModal
