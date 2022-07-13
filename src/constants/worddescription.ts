@@ -161,4 +161,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     roadmap:
         'Plan a seguir a largo y corto plazo de un projecto dado, con distintas metas a cumplir con el pasar del tiempo.',
     trezor: 'Una de las cold wallets (billeteras frias) mas conocidas por su seguridad y prestaciones. Permite dar una mayor cuidado a las transacciones que se realizan y las monedas que se guardan',
+tightening: 'Es un fenómeno macroeconómico que corresponde a un "ajuste" (de ahí tightening en inglés) de las tasas de interés mundiales. La FED ("banco central" de EEUU) sube las tasas para bajar la inflación y eso generalmente genera bajas en la mayoría de los activos financieros'
+
 }
