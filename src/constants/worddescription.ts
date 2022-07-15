@@ -164,4 +164,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     tightening:
         'Es un fenómeno macroeconómico que corresponde a un "ajuste" (de ahí tightening en inglés) de las tasas de interés mundiales. La FED ("banco central" de EEUU) sube las tasas para bajar la inflación y eso generalmente genera bajas en la mayoría de los activos financieros',
     tether: 'Es la empresa detrás de USDT. Es una stablecoin centralizada: cada USDT está respaldado por un dólar en la cuenta de banco de Tether. En el último tiempo hubo bastantes dudas acerca de si realmente tienen respaldo para todos los USDT en circulación.',
+    address:
+        '(Dirección, en español) La address es el código alfanumérico que solemos encontrar en wallets o smart contracts. Una address indica un destino para un pago de criptomoneda o token que se esté transando. Es el equivalente al número de cuenta de la banca tradicional. La address se comparte con otras personas para recibir pagos o fondos. También utilizamos address ajenas cuando enviamos fondos a otras personas.',
 }
