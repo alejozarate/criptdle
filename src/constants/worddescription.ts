@@ -166,4 +166,5 @@ export const WORDS_DESCRIPTION: StringMap = {
     tether: 'Es la empresa detrás de USDT. Es una stablecoin centralizada: cada USDT está respaldado por un dólar en la cuenta de banco de Tether. En el último tiempo hubo bastantes dudas acerca de si realmente tienen respaldo para todos los USDT en circulación.',
     address:
         '(Dirección, en español) La address es el código alfanumérico que solemos encontrar en wallets o smart contracts. Una address indica un destino para un pago de criptomoneda o token que se esté transando. Es el equivalente al número de cuenta de la banca tradicional. La address se comparte con otras personas para recibir pagos o fondos. También utilizamos address ajenas cuando enviamos fondos a otras personas.',
+    poap: 'Es el acrónimo de Proof of Attendance Protocol, es decir, Protocolo de Prueba de Asistencia. Es un certificado digital en formato de NFT que sirve para demostrar la asistencia a un evento en el metaverso o en el mundo real.',
 }
