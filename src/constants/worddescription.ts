@@ -167,4 +167,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     address:
         '(Dirección, en español) La address es el código alfanumérico que solemos encontrar en wallets o smart contracts. Una address indica un destino para un pago de criptomoneda o token que se esté transando. Es el equivalente al número de cuenta de la banca tradicional. La address se comparte con otras personas para recibir pagos o fondos. También utilizamos address ajenas cuando enviamos fondos a otras personas.',
     poap: 'Es el acrónimo de Proof of Attendance Protocol, es decir, Protocolo de Prueba de Asistencia. Es un certificado digital en formato de NFT que sirve para demostrar la asistencia a un evento en el metaverso o en el mundo real.',
+    wrapped:
+        'Es un token cripto anclado al valor de otra cripto. Se denomina de esta forma porque el activo original se coloca en un "wrapper", una especie de cofre digital que permite que la versión "wrappeada" sea creada en otra blockchain.',
 }
