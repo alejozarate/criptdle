@@ -325,7 +325,7 @@ function App() {
                     rel="noreferrer"
                     target={'_blank'}
                 >
-                    <p className="text-white mt-6 text-center underline">
+                    <p className="mt-6 text-center underline dark:text-white">
                         Proponé tu palabra para el Criptdle
                     </p>
                 </a>
