@@ -169,4 +169,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     poap: 'Es el acrónimo de Proof of Attendance Protocol, es decir, Protocolo de Prueba de Asistencia. Es un certificado digital en formato de NFT que sirve para demostrar la asistencia a un evento en el metaverso o en el mundo real.',
     wrapped:
         'Es un token cripto anclado al valor de otra cripto. Se denomina de esta forma porque el activo original se coloca en un "wrapper", una especie de cofre digital que permite que la versión "wrappeada" sea creada en otra blockchain.',
+    harmony:
+        'Es una blockchain de Capa 1 que utiliza sharding y Effective Proof of Stake para lograr escalabilidad, seguridad y descentralización.',
 }
