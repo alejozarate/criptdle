@@ -172,5 +172,5 @@ export const WORDS_DESCRIPTION: StringMap = {
     harmony:
         'Es una blockchain de Capa 1 que utiliza sharding y Effective Proof of Stake para lograr escalabilidad, seguridad y descentralización.',
     tokenized:
-        'Un activo tokenizado -del inglés tokenized- es la forma en que cualquier activo del mundo real, tangible o intangible se digitaliza y luego se divide en partes más pequeñas que toman la forma de tokens. --- *Si estás en TalentLand, acercate al stand de Koinbanx para recibir tu premio.',
+        'Un activo tokenizado -del inglés tokenized- es la forma en que cualquier activo del mundo real, tangible o intangible se digitaliza y luego se divide en partes más pequeñas que toman la forma de tokens. --- *Si estás en TalentLand, acercate al stand de Koibanx y sigue a @koibanx y @solowcripto para recibir tu premio.',
 }
