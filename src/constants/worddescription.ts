@@ -171,4 +171,6 @@ export const WORDS_DESCRIPTION: StringMap = {
         'Es un token cripto anclado al valor de otra cripto. Se denomina de esta forma porque el activo original se coloca en un "wrapper", una especie de cofre digital que permite que la versión "wrappeada" sea creada en otra blockchain.',
     harmony:
         'Es una blockchain de Capa 1 que utiliza sharding y Effective Proof of Stake para lograr escalabilidad, seguridad y descentralización.',
+    tokenized:
+        'Un activo tokenizado -del inglés tokenized- es la forma en que cualquier activo del mundo real, tangible o intangible se digitaliza y luego se divide en partes más pequeñas que toman la forma de tokens. --- *Si estás en TalentLand, acercate al stand de Koinbanx para recibir tu premio.',
 }
