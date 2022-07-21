@@ -173,4 +173,9 @@ export const WORDS_DESCRIPTION: StringMap = {
         'Es una blockchain de Capa 1 que utiliza sharding y Effective Proof of Stake para lograr escalabilidad, seguridad y descentralización.',
     tokenized:
         'Un activo tokenizado -del inglés tokenized- es la forma en que cualquier activo del mundo real, tangible o intangible se digitaliza y luego se divide en partes más pequeñas que toman la forma de tokens. --- *Si estás en TalentLand, acercate al stand de Koibanx y sigue a @koibanx y @solowcripto para recibir tu premio.',
+    blockchain:
+        'Uffff, definir blockchain en una frase. Qué dificil.... --- *Si estás en TalentLand, acercate al stand de Koibanx y sigue a @koibanx y @solowcripto para recibir tu premio.',
+    ledger: 'Es la empresa líder en hardware wallets. La ventaja de usar una hardware wallet o wallet fría, es que no está conectada a internet por lo que es menos susceptible a ataques. --- *Si estás en TalentLand, acercate al stand de Koibanx y sigue a @koibanx y @solowcripto para recibir tu premio.',
+    cypherpunk:
+        'Es una persona que defiende el uso de la criptogradia y la tecnologia con el fin de proteger la privacidad de las personas. Leer manifiesto cypherpunk para entender aun mas :)',
 }
