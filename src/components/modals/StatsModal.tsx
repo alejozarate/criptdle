@@ -66,20 +66,8 @@ export const StatsModal = ({
                             </p>
                         </div>
                         <div className="mt-6">
-                            <small className="dark:text-white">
-                                * Muchas definiciones son de{' '}
-                                <a
-                                    href="https://www.defilatam.com/definiciones"
-                                    target="_blank"
-                                    className="underline outline-none"
-                                    rel="noreferrer"
-                                >
-                                    DeFi Latam
-                                </a>{' '}
-                            </small>
-                            <br />
                             <small className="mb-4 outline-none dark:text-white">
-                                ** Para seguir aprendiendo de cripto sumate al{' '}
+                                * Para seguir aprendiendo de cripto sumate al{' '}
                                 <a
                                     href="https://discord.com/invite/kHvSC9WHzC"
                                     target="_blank"

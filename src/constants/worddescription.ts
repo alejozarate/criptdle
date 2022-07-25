@@ -178,4 +178,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     ledger: 'Es la empresa líder en hardware wallets. La ventaja de usar una hardware wallet o wallet fría, es que no está conectada a internet por lo que es menos susceptible a ataques. --- *Si estás en TalentLand, acercate al stand de Koibanx y sigue a @koibanx y @solowcripto para recibir tu premio.',
     cypherpunk:
         'Es una persona que defiende el uso de la criptogradia y la tecnologia con el fin de proteger la privacidad de las personas. Leer manifiesto cypherpunk para entender aun mas :)',
+    etherscan:
+        'Es una herramienta para el análisis y navegación en las cadenas de bloques de Ethereum. ',
 }
