@@ -180,4 +180,6 @@ export const WORDS_DESCRIPTION: StringMap = {
         'Es una persona que defiende el uso de la criptogradia y la tecnologia con el fin de proteger la privacidad de las personas. Leer manifiesto cypherpunk para entender aun mas :)',
     etherscan:
         'Es una herramienta para el análisis y navegación en las cadenas de bloques de Ethereum. ',
+    atomicswap:
+        'Es un tipo de intercambio de criptomonedas que se da de forma descentralizada y sin necesidad de intermediarios en el proceso en diferentes blockchains. --- Definición de @0xPumbi',
 }
