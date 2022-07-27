@@ -182,4 +182,6 @@ export const WORDS_DESCRIPTION: StringMap = {
         'Es una herramienta para el análisis y navegación en las cadenas de bloques de Ethereum. ',
     atomicswap:
         'Es un tipo de intercambio de criptomonedas que se da de forma descentralizada y sin necesidad de intermediarios en el proceso en diferentes blockchains. --- Definición de @0xPumbi',
+    framework:
+        'Un entorno de trabajo​ o marco de trabajo​ es un conjunto estandarizado de conceptos, prácticas y criterios para enfocar un tipo de problemática particular que sirve como referencia, para enfrentar y resolver nuevos problemas de índole similar. --- Definición de @marcoflorit',
 }
