@@ -184,4 +184,5 @@ export const WORDS_DESCRIPTION: StringMap = {
         'Es un tipo de intercambio de criptomonedas que se da de forma descentralizada y sin necesidad de intermediarios en el proceso en diferentes blockchains. --- Definición de @0xPumbi',
     framework:
         'Un entorno de trabajo​ o marco de trabajo​ es un conjunto estandarizado de conceptos, prácticas y criterios para enfocar un tipo de problemática particular que sirve como referencia, para enfrentar y resolver nuevos problemas de índole similar. --- Definición de @marcoflorit',
+    wei: 'WEI es la mínima expresión de Ether, siendo 1000000000000000000 WEI = 1 ETH, aunque la forma más popular de expresar mínimas cantidades de Ether suele ser el GWEI. --- Definición de @cryptologo',
 }
