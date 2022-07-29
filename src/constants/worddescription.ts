@@ -185,4 +185,9 @@ export const WORDS_DESCRIPTION: StringMap = {
     framework:
         'Un entorno de trabajo​ o marco de trabajo​ es un conjunto estandarizado de conceptos, prácticas y criterios para enfocar un tipo de problemática particular que sirve como referencia, para enfrentar y resolver nuevos problemas de índole similar. --- Definición de @marcoflorit',
     wei: 'WEI es la mínima expresión de Ether, siendo 1000000000000000000 WEI = 1 ETH, aunque la forma más popular de expresar mínimas cantidades de Ether suele ser el GWEI. --- Definición de @cryptologo',
+    alpha: '(Por Alpha Leak) Información filtrada, nueva, valiosa y estratégica sobre proyectos --- Definición de @0xPumbi',
+    bluechip:
+        'Un token o proyecto blue chip es un proyecto consagrado dentro del ecosistema. Por ejemplo, Uniswap o BoredApes son bluechips.',
+    chainlink:
+        'Red de oráculo descentralizado que tiene como objetivo conectar contratos inteligentes con datos del mundo real --- Definición de franquen#2639',
 }
