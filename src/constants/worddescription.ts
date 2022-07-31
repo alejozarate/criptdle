@@ -190,4 +190,6 @@ export const WORDS_DESCRIPTION: StringMap = {
         'Un token o proyecto blue chip es un proyecto consagrado dentro del ecosistema. Por ejemplo, Uniswap o BoredApes son bluechips.',
     chainlink:
         'Red de oráculo descentralizado que tiene como objetivo conectar contratos inteligentes con datos del mundo real --- Definición de franquen#2639',
+    trading:
+        'compra y venta de activos con el fin de maximizar el beneficio en un determinado período de tiempo. Suele practicarse en mercados con mucha liquidez.',
 }
