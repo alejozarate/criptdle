@@ -192,4 +192,5 @@ export const WORDS_DESCRIPTION: StringMap = {
         'Red de oráculo descentralizado que tiene como objetivo conectar contratos inteligentes con datos del mundo real --- Definición de franquen#2639',
     trading:
         'compra y venta de activos con el fin de maximizar el beneficio en un determinado período de tiempo. Suele practicarse en mercados con mucha liquidez.',
+    spread: 'Spread es la diferencia entre el precio de compra y el de venta de un activo financiero.​ Es una especie de margen que se utiliza para medir la liquidez del mercado. --- Definición de @NonElle_',
 }
