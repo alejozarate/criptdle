@@ -193,4 +193,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     trading:
         'compra y venta de activos con el fin de maximizar el beneficio en un determinado período de tiempo. Suele practicarse en mercados con mucha liquidez.',
     spread: 'Spread es la diferencia entre el precio de compra y el de venta de un activo financiero.​ Es una especie de margen que se utiliza para medir la liquidez del mercado. --- Definición de @NonElle_',
+    entropia:
+        'En la computación, la entropía es la aleatoriedad recogida por un sistema operativo o una aplicación para su uso en criptografía o para otros usos que requieren datos aleatorios. Esta aleatoriedad a menudo se obtiene de fuentes de hardware, ya sea preexistentes, tales como los movimientos del ratón o, si se dispone, de generadores de azar.',
 }
