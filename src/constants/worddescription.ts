@@ -195,4 +195,8 @@ export const WORDS_DESCRIPTION: StringMap = {
     spread: 'Spread es la diferencia entre el precio de compra y el de venta de un activo financiero.​ Es una especie de margen que se utiliza para medir la liquidez del mercado. --- Definición de @NonElle_',
     entropia:
         'En la computación, la entropía es la aleatoriedad recogida por un sistema operativo o una aplicación para su uso en criptografía o para otros usos que requieren datos aleatorios. Esta aleatoriedad a menudo se obtiene de fuentes de hardware, ya sea preexistentes, tales como los movimientos del ratón o, si se dispone, de generadores de azar.',
+    ltv: 'Loan-To-Value (del inglés radio prestamo-valor) define el valor máximo en activos que puede ser tomados a partir de un colateral específico y suele estar representado en porcentaje --- Definición de @cryptologo',
+    muun: 'Bitcoin hot wallet de desarrollo argentino muy innovadora, entre otras funcionalidades permite combinar el saldo disponible en red BTC y Lightning Network --- Definición de @IsmaelARocha',
+    whisper:
+        'Whisper es un protocolo de comunicacion para las dapps deployadas en  Ethereum --- Definición de franquen#2639',
 }
