@@ -199,4 +199,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     muun: 'Bitcoin hot wallet de desarrollo argentino muy innovadora, entre otras funcionalidades permite combinar el saldo disponible en red BTC y Lightning Network --- Definición de @IsmaelARocha',
     whisper:
         'Whisper es un protocolo de comunicacion para las dapps deployadas en  Ethereum --- Definición de franquen#2639',
+    criptodex:
+        'Criptodex es un juego para que te diviertas aprendiendo cripto y conociendo al ecosistema. Hay más de 50 criptomones por descubrir durante la semana ETH Latam 22 ¡Atrapalos todos!',
 }
