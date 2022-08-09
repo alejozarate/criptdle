@@ -202,4 +202,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     criptodex:
         'Criptodex es un juego para que te diviertas aprendiendo cripto y conociendo al ecosistema. Hay más de 50 criptomones por descubrir durante la semana ETH Latam 22 ¡Atrapalos todos!',
     lens: 'Lens es un grafo social, abierto y descentralizado sobre el cual el mundo cripto pueda crear plataformas del futuro. Crea la base para que se puedan construir redes sociales descentralizadas y que uses el mismo usuario en todas --- Definición de @marcoflorit',
+    earlybird:
+        'Inversores que compraron criptomonedas en los primeros años de su historia. -- Definición de @0xPumbi. PD: Bienvenido a Argentina <3',
 }
