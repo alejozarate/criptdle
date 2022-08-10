@@ -204,4 +204,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     lens: 'Lens es un grafo social, abierto y descentralizado sobre el cual el mundo cripto pueda crear plataformas del futuro. Crea la base para que se puedan construir redes sociales descentralizadas y que uses el mismo usuario en todas --- Definición de @marcoflorit',
     earlybird:
         'Inversores que compraron criptomonedas en los primeros años de su historia. -- Definición de @0xPumbi. PD: Bienvenido a Argentina <3',
+    frontrun:
+        'Se dice frontrun cuando una gran orden de compra realizada en un AMM es interceptada por bots que se encargan de "aprovecharse" de dicha compra y salir favorecidos en el intercambio. --- Definición de @cryptologo',
 }
