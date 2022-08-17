@@ -62,7 +62,7 @@ export const WORDS_DESCRIPTION: StringMap = {
     peg: 'Término utilizado cuando un token está vinculado al precio de otro activo. Para alcanzar esto, los tokens pueden estar respaldados al activo subyacente o por otros para mantener el precio objetivo, y a veces se acompaña con mecanismos automatizados para sostener el precio en el mercado principal y fortalecer su estabilidad.',
     ponzi: 'Sistema de captación de inversiones de forma piramidal donde se prometen grandes retornos a una inversión mínima. Cuando dejan de ingresar nuevos inversores, el sistema colapsa. Se ha utilizado en emisiones de nuevas de criptomonedas, como un método de engaño para captar inversionistas.',
     pool: 'Un contrato inteligente que contiene cantidades compartidas de activos proporcionados por los depositantes. Los pools se utilizan, entre otras cosas, en los creadores de mercado automatizados (AMM) con fines de negociación optimizada, en la agregación de préstamos o en las estrategias de Yield Faming compartido.',
-    pos: '(Del inglés Proof of Stake) En español se puede traducir por ‘prueba de participación’ y es un sistema de validación de las transacciones de una red basada en una serie de masternodos que almacenan criptomonedas en una wallet o cartera.',
+    //pos: '(Del inglés Proof of Stake) En español se puede traducir por ‘prueba de participación’ y es un sistema de validación de las transacciones de una red basada en una serie de masternodos que almacenan criptomonedas en una wallet o cartera.',
     pow: '(Del inglés Proof of Work) En español ‘prueba de trabajo’ es un sistema de validación de las transacciones de una red mediante la resolución de operaciones matemáticas a través de equipos informáticos especializados.',
     pump: 'Término en inglés que expresa una notable y repentina subida en el valor de una criptomoneda. Pueden ser provocados por una persona o grupo de éstas o por algún acontecimiento de alcance que genere un movimiento masivo de compras de una criptomoneda.',
     rig: 'Un Rig de minería, es un arreglo de elementos de hardware, bien sea de CPU, GPU, FPGA o ASIC que han sido dispuestos para realizar minería de criptomonedas.',
@@ -206,4 +206,5 @@ export const WORDS_DESCRIPTION: StringMap = {
         'Inversores que compraron criptomonedas en los primeros años de su historia. -- Definición de @0xPumbi. PD: Bienvenido a Argentina <3',
     frontrun:
         'Se dice frontrun cuando una gran orden de compra realizada en un AMM es interceptada por bots que se encargan de "aprovecharse" de dicha compra y salir favorecidos en el intercambio. --- Definición de @cryptologo',
+    pos: 'La "prueba de participación" es un mecanismo de consenso que requiere del bloqueo de fondos para la producción y validación de los bloques de una cadena.',
 }
