@@ -208,4 +208,6 @@ export const WORDS_DESCRIPTION: StringMap = {
         'Se dice frontrun cuando una gran orden de compra realizada en un AMM es interceptada por bots que se encargan de "aprovecharse" de dicha compra y salir favorecidos en el intercambio. --- Definición de @cryptologo',
     pos: 'La "prueba de participación" es un mecanismo de consenso que requiere del bloqueo de fondos para la producción y validación de los bloques de una cadena.',
     sat: 'Unidad mínima de btc, cien millonésima parte de 1 bitcoin, 1/100.000.000, denominada de esa forma por los usuarios en honor a SAToshi Nakamoto --- Definición anon',
+    consenso:
+        'El algoritmo de consenso o "consensus" es el mecanismo usado, por una cadena de bloques, para seleccionar el estado correcto de un registro después de realizada una transacción --- Definición de @MASM5718',
 }
