@@ -210,4 +210,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     sat: 'Unidad mínima de btc, cien millonésima parte de 1 bitcoin, 1/100.000.000, denominada de esa forma por los usuarios en honor a SAToshi Nakamoto --- Definición anon',
     consenso:
         'El algoritmo de consenso o "consensus" es el mecanismo usado, por una cadena de bloques, para seleccionar el estado correcto de un registro después de realizada una transacción --- Definición de @MASM5718',
+    onchain:
+        'Una transacción on chain sucede dentro de la cadena de bloques, a diferencia de una transacción off chain. --- Definición de mmednik',
 }

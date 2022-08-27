@@ -86,6 +86,7 @@ export const WORDS = [
     'cex',
     'sat',
     'consenso',
+    'onchain',
     //'claim',
     //'dai',
     'dao',
