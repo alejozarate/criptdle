@@ -212,4 +212,5 @@ export const WORDS_DESCRIPTION: StringMap = {
         'El algoritmo de consenso o "consensus" es el mecanismo usado, por una cadena de bloques, para seleccionar el estado correcto de un registro después de realizada una transacción --- Definición de @MASM5718',
     onchain:
         'Una transacción on chain sucede dentro de la cadena de bloques, a diferencia de una transacción off chain. --- Definición de mmednik',
+    riesgo: 'Probabilidad de ocurrencia de un contratiempo o evento desfavorable dentro de cierto intervalo de tiempo, como consecuencia de una decisión. --- Definición de @belo_app',
 }
