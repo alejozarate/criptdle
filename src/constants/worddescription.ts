@@ -213,4 +213,5 @@ export const WORDS_DESCRIPTION: StringMap = {
     onchain:
         'Una transacción on chain sucede dentro de la cadena de bloques, a diferencia de una transacción off chain. --- Definición de mmednik',
     riesgo: 'Probabilidad de ocurrencia de un contratiempo o evento desfavorable dentro de cierto intervalo de tiempo, como consecuencia de una decisión. --- Definición de @belo_app',
+    indice: 'Valor numérico de referencia calculado a partir del precio de mercado de cada uno de los distintos valores que lo componen en un momento determinado. --- Definición de @belo_app',
 }
