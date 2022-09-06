@@ -217,4 +217,5 @@ export const WORDS_DESCRIPTION: StringMap = {
     royalties:
         'Comisión que se le paga los creadores de NFTs cada vez que sus obras se revenden. (Depende del marketplace) --- Definición de franquen',
     ripio: 'Exchange Centralizado Argentino, fue fundada en 2013, está creando su blockchain y tiene su token --- Definición de @marcoflorit',
+    ziliqa: 'Ziliqa es una blockchain con un mecanismo de consenso que combina proof-of-work y pBFT al mismo tiempo que aplica sharding al procesamiento de la información. Permite contratos inteligentes escritos en un lenguaje de programación propio llamado Scilla. -- Definición de @franquen',
 }
