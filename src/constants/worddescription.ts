@@ -216,4 +216,5 @@ export const WORDS_DESCRIPTION: StringMap = {
     indice: 'Valor numérico de referencia calculado a partir del precio de mercado de cada uno de los distintos valores que lo componen en un momento determinado. --- Definición de @belo_app',
     royalties:
         'Comisión que se le paga los creadores de NFTs cada vez que sus obras se revenden. (Depende del marketplace) --- Definición de franquen',
+    ripio: 'Exchange Centralizado Argentino, fue fundada en 2013, está creando su blockchain y tiene su token --- Definición de @marcoflorit',
 }

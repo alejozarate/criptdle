@@ -101,6 +101,7 @@ export const WORDS = [
     'dex',
     'crowdloan',
     'leverage',
+    'ripio',
     'finney',
     //'dns',
     //'dump',
