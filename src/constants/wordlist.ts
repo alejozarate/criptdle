@@ -102,7 +102,7 @@ export const WORDS = [
     'crowdloan',
     'leverage',
     'ripio',
-    'finney',
+    //'finney',
     //'dns',
     //'dump',
     //'dyor',
