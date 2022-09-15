@@ -223,4 +223,6 @@ export const WORDS_DESCRIPTION: StringMap = {
     dolphin:
         'Inversor con cierto renombre en la comunidad con alguna influencia en el movimiento del precio de una criptomoneda. --- Definición de @0xPumbi',
     buidl: 'Referencia utilizada en la comunidad cripto que hace referencia a construir, esto puede ser tanto desde el lado de construir comunidad como proyectos o protocolos. Se escribe de esa manera (inspirado en HODL) y es un llamado a construir y contribuir al ecosistema, en lugar de solo holdear pasivamente. --- Definición de @cryptologo',
+    crosschain:
+        'Interoperabilidad entre dos blockchains independientes. La característica de crosschain permite que blockchains o protocolos se comuniquen entre sí, gracias a que las blockchains involucrada --- Definición de @0xPumbi',
 }
