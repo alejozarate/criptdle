@@ -21,7 +21,7 @@ import {
     REVEAL_TIME_MS,
     GAME_LOST_INFO_DELAY,
     WELCOME_INFO_MODAL_MS,
-    MAX_SCORE,
+    BASE_SCORE,
 } from './constants/settings'
 import {
     isWordInWordList,
@@ -208,6 +208,25 @@ function App() {
         )
     }
 
+    const calculateScore = (guesses: number) => {
+        switch (guesses) {
+            case 1:
+                return 600
+            case 2:
+                return 500
+            case 3:
+                return 400
+            case 4:
+                return 300
+            case 5:
+                return 200
+            case 6:
+                return 100
+            default:
+                return 0
+        }
+    }
+
     const onEnter = () => {
         if (isGameWon || isGameLost) {
             return
@@ -259,7 +278,7 @@ function App() {
             setCurrentGuess('')
 
             if (winningWord) {
-                updateScore(MAX_SCORE / guesses.length)
+                updateScore(calculateScore(guesses.length + 1))
                 setStats(addStatsForCompletedGame(stats, guesses.length))
                 return setIsGameWon(true)
             }
