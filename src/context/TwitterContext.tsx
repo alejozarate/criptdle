@@ -59,6 +59,8 @@ export const TwitterProvider = ({ children }: Props) => {
                 deleteTwitterUserFromLocalStorage()
             })
             .catch((err) => {
+                console.log(err)
+
                 showErrorAlert(
                     `Ups, que vergüenza para la Web2. Hubo un error cerrando tu sesión con Twitter.`
                 )

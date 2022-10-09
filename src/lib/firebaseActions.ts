@@ -80,7 +80,7 @@ export const getRanking = async () => {
 
     let orderedRanking = users.sort(
         (a: { score: number }, b: { score: number }) => {
-            return a.score - b.score
+            return b.score - a.score
         }
     )
 

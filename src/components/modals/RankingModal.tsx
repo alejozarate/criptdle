@@ -8,13 +8,12 @@ import {
 } from '../../constants/strings'
 
 import { TwitterCtx } from '../../context/TwitterContext'
+import { MAX_QTY_USERS_PER_PAGE } from '../../constants/settings'
 
 type Props = {
     isOpen: boolean
     handleClose: () => void
 }
-
-const MAX_QTY_USERS_PER_PAGE = 10
 
 export const RankingModal = ({ isOpen, handleClose }: Props) => {
     const [ranking, setRanking] = useState<rankeredUser[]>([])
