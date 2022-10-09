@@ -21,6 +21,7 @@ import {
     REVEAL_TIME_MS,
     GAME_LOST_INFO_DELAY,
     WELCOME_INFO_MODAL_MS,
+    MAX_SCORE,
 } from './constants/settings'
 import {
     isWordInWordList,
@@ -258,7 +259,7 @@ function App() {
             setCurrentGuess('')
 
             if (winningWord) {
-                updateScore(guesses.length)
+                updateScore(MAX_SCORE / guesses.length)
                 setStats(addStatsForCompletedGame(stats, guesses.length))
                 return setIsGameWon(true)
             }
@@ -266,7 +267,7 @@ function App() {
             if (guesses.length === MAX_CHALLENGES - 1) {
                 setStats(addStatsForCompletedGame(stats, guesses.length + 1))
                 setIsGameLost(true)
-                updateScore(6)
+                updateScore(0)
                 showErrorAlert(CORRECT_WORD_MESSAGE(solution), {
                     persist: true,
                     delayMs: REVEAL_TIME_MS * MAX_WORD_LENGTH + 1,
