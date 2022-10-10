@@ -108,8 +108,6 @@ export const Navbar = ({
                     <button onClick={() => window.login()}>
                         Login with Unstoppable
                     </button>
-
-                    <button onClick={() => window.logout()}>Logout</button>
                 </div>
             </div>
             <hr></hr>
