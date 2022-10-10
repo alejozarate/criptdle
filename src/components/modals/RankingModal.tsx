@@ -80,7 +80,7 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
                                     Twitter
                                 </th>
                                 <th className="text-xl">Score</th>
-                                <th className="text-xl">Copinhas</th>
+                                {/* <th className="text-xl">Copinhas</th> */}
                             </tr>
                         </thead>
                     ) : (
@@ -89,9 +89,19 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
                     <tbody>
                         {renderedRanking.map((user) => (
                             <tr key={user.userId}>
-                                <td>@{user.username}</td>
+                                <td>
+                                    {user.username
+                                        .replace(
+                                            /([\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g,
+                                            ''
+                                        )
+                                        .replace(/\s/g, '') +
+                                        Math.floor(Math.random() * 10) +
+                                        Math.floor(Math.random() * 10)}
+                                    .wallet
+                                </td>
                                 <td>{user.score}</td>
-                                <td>{user.copinha || 0}</td>
+                                {/* <td>{user.copinha || 0}</td> */}
                             </tr>
                         ))}
                     </tbody>
