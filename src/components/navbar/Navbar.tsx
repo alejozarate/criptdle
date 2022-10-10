@@ -5,7 +5,11 @@ import {
     StarIcon,
 } from '@heroicons/react/outline'
 import { GAME_TITLE } from '../../constants/strings'
-import TwitterButton from '../authentication/TwitterButton'
+import { TwitterCtx } from '../../context/TwitterContext'
+import { postUserToDb } from '../../lib/firebaseActions'
+
+import UAuth from '@uauth/js'
+import { createContext, useContext, useState } from 'react'
 
 type Props = {
     setIsInfoModalOpen: (value: boolean) => void
@@ -14,12 +18,55 @@ type Props = {
     setIsSettingsModalOpen: (value: boolean) => void
 }
 
+const uauth = new UAuth({
+    clientID: 'c393e2c7-3dda-47d6-a571-a936680d87ae',
+    redirectUri: 'http://localhost:3000',
+    scope: 'openid wallet',
+})
+
+interface AppContextInterface {
+    authenticated: boolean
+    setAuthenticated: (authenticated: boolean) => void
+    username: String | null
+    setUsername: (username: string | null) => void
+    UnstoppableSignIn: () => void
+    UnstoppableSignOut: () => void
+    checkUserAuth: () => void
+}
+
+export const UnstoppableCtx = createContext<AppContextInterface | null>(null)
+
 export const Navbar = ({
     setIsInfoModalOpen,
     setIsStatsModalOpen,
     setIsRankingModalOpen,
     setIsSettingsModalOpen,
 }: Props) => {
+    const [authenticated, setAuthenticated] = useState<boolean>(false)
+    const [username, setUsername] = useState<string | null>('')
+
+    window.login = async () => {
+        try {
+            const authorization = await uauth.loginWithPopup()
+            const displayName = authorization.idToken.sub
+            const uid = authorization.idToken.wallet_address || ''
+
+            console.log('Logged in ')
+            console.log(authorization)
+            console.log('Domain name: ', displayName)
+            console.log('ETH address: ', uid)
+
+            postUserToDb({ displayName, uid })
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
+    window.logout = async () => {
+        await uauth.logout()
+        console.log('Logged out with Unstoppable')
+    }
+
     return (
         <div className="navbar">
             <div className="px-5 navbar-content">
@@ -58,7 +105,11 @@ export const Navbar = ({
                         onClick={() => setIsRankingModalOpen(true)}
                         className="w-6 h-6 mr-3 cursor-pointer dark:stroke-white"
                     />
-                    <TwitterButton />
+                    <button onClick={() => window.login()}>
+                        Login with Unstoppable
+                    </button>
+
+                    <button onClick={() => window.logout()}>Logout</button>
                 </div>
             </div>
             <hr></hr>
