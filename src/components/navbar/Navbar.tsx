@@ -20,7 +20,7 @@ type Props = {
 
 const uauth = new UAuth({
     clientID: 'c393e2c7-3dda-47d6-a571-a936680d87ae',
-    redirectUri: 'http://localhost:3000',
+    redirectUri: 'https://criptdle-git-hackathon-alejozarate.vercel.app/',
     scope: 'openid wallet',
 })
 
