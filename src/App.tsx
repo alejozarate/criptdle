@@ -22,6 +22,7 @@ import {
     GAME_LOST_INFO_DELAY,
     WELCOME_INFO_MODAL_MS,
     BASE_SCORE,
+    MAX_POINTS,
 } from './constants/settings'
 import {
     isWordInWordList,
@@ -209,22 +210,8 @@ function App() {
     }
 
     const calculateScore = (guesses: number) => {
-        switch (guesses) {
-            case 1:
-                return 600
-            case 2:
-                return 500
-            case 3:
-                return 400
-            case 4:
-                return 300
-            case 5:
-                return 200
-            case 6:
-                return 100
-            default:
-                return 0
-        }
+        return MAX_POINTS + (MAX_POINTS / MAX_CHALLENGES) * (1 - guesses)
+        // 600 + (100 * (1 - guesses))
     }
 
     const onEnter = () => {
