@@ -80,26 +80,23 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
                     )}
                     <tbody>
                         {renderedRanking.map((user) => (
-                            <tr key={user.userId}>
+                            <tr
+                                key={
+                                    user.userId.slice()[0] === '0'
+                                        ? user.userId
+                                        : null
+                                }
+                            >
                                 <td>
-                                    {`${
-                                        user.username
-                                            .replace(
-                                                /([\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g,
-                                                ''
-                                            )
-                                            .replace(/\s/g, '') +
-                                        Math.floor(Math.random() * 10) +
-                                        Math.floor(Math.random() * 10)
-                                    }.${
-                                        domains[
-                                            Math.floor(
-                                                Math.random() * domains.length
-                                            )
-                                        ]
-                                    }`}
+                                    {user.userId.slice()[0] === '0'
+                                        ? user.username
+                                        : null}
                                 </td>
-                                <td>{user.score}</td>
+                                <td>
+                                    {user.userId.slice()[0] === '0'
+                                        ? user.score
+                                        : null}
+                                </td>
                                 {/* <td>{user.copinha || 0}</td> */}
                             </tr>
                         ))}
