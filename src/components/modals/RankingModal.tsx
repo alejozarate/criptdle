@@ -9,6 +9,7 @@ import {
 
 import { TwitterCtx } from '../../context/TwitterContext'
 import { MAX_QTY_USERS_PER_PAGE } from '../../constants/settings'
+import { domains } from '../../constants/domains'
 
 type Props = {
     isOpen: boolean
@@ -48,11 +49,7 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
     }, [ranking, page])
 
     return (
-        <BaseModal
-            title="Twitter Ranking"
-            isOpen={isOpen}
-            handleClose={handleClose}
-        >
+        <BaseModal title="Ranking" isOpen={isOpen} handleClose={handleClose}>
             <div className="flex flex-col items-center mt-2 dark:text-white">
                 <p className="mb-4">
                     El score se determina por la cantidad de intentos para
@@ -62,13 +59,8 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
                         ''
                     ) : (
                         <span>
-                            Para participar tenés que{' '}
-                            <span
-                                onClick={context?.twitterSignIn}
-                                className={'underline cursor-pointer'}
-                            >
-                                loguearte con Twitter.
-                            </span>
+                            Para participar tenés que loguearte con Unstoppable
+                            Domains.
                         </span>
                     )}
                 </p>
@@ -90,15 +82,22 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
                         {renderedRanking.map((user) => (
                             <tr key={user.userId}>
                                 <td>
-                                    {user.username
-                                        .replace(
-                                            /([\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g,
-                                            ''
-                                        )
-                                        .replace(/\s/g, '') +
+                                    {`${
+                                        user.username
+                                            .replace(
+                                                /([\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g,
+                                                ''
+                                            )
+                                            .replace(/\s/g, '') +
                                         Math.floor(Math.random() * 10) +
-                                        Math.floor(Math.random() * 10)}
-                                    .wallet
+                                        Math.floor(Math.random() * 10)
+                                    }.${
+                                        domains[
+                                            Math.floor(
+                                                Math.random() * domains.length
+                                            )
+                                        ]
+                                    }`}
                                 </td>
                                 <td>{user.score}</td>
                                 {/* <td>{user.copinha || 0}</td> */}
