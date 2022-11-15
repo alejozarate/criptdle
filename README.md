@@ -1,4 +1,4 @@
-Project name: Criptdle Barrier
+Project name: Solow
 
 Link to working code in a public repo OR PR link to a public repo: https://github.com/alejozarate/criptdle/pull/5
 
