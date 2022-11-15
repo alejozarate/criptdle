@@ -43,7 +43,6 @@ export const Navbar = ({
     setIsSettingsModalOpen,
 }: Props) => {
     const [authenticated, setAuthenticated] = useState<boolean>(false)
-    const [username, setUsername] = useState<string | null>('')
 
     window.login = async () => {
         try {
@@ -53,6 +52,7 @@ export const Navbar = ({
 
             console.log('Logged in ')
             console.log(authorization)
+            // setAuthenticated(true)
             console.log('Domain name: ', displayName)
             console.log('ETH address: ', uid)
 
@@ -66,6 +66,8 @@ export const Navbar = ({
         await uauth.logout()
         console.log('Logged out with Unstoppable')
     }
+
+    console.log({ authenticated })
 
     return (
         <div className="navbar">
@@ -105,9 +107,11 @@ export const Navbar = ({
                         onClick={() => setIsRankingModalOpen(true)}
                         className="w-6 h-6 mr-3 cursor-pointer dark:stroke-white"
                     />
-                    <button onClick={() => window.login()}>
-                        Login with Unstoppable
-                    </button>
+                    {!authenticated && (
+                        <button onClick={() => window.login()}>
+                            Login with Unstoppable
+                        </button>
+                    )}
                 </div>
             </div>
             <hr></hr>
