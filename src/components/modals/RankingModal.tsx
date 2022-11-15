@@ -70,7 +70,7 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
                         <thead>
                             <tr>
                                 <th className="text-xl text-blue-400">
-                                    Twitter
+                                    Unstoppable Domains
                                 </th>
                                 <th className="text-xl">Score</th>
                                 {/* <th className="text-xl">Copinhas</th> */}

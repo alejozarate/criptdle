@@ -10,8 +10,6 @@ export const HARD_MODE_ALERT_MESSAGE =
 export const HARD_MODE_DESCRIPTION =
     'Todas las pistas reveladas deben ser usadas en el próximo intento'
 export const HIGH_CONTRAST_MODE_DESCRIPTION = 'Para mejorar el contraste'
-export const TWITTER_ACCOUNT_DESCRIPTION =
-    'Activa o desactiva tu cuenta de Twitter'
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
     `La palabra era ${solution}`
 export const WRONG_SPOT_MESSAGE = (guess: string, position: number) =>
