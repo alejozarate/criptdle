@@ -32,7 +32,7 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
         getRanking()
             .then((ranking) => {
                 setRanking(ranking)
-                setPageQty(Math.ceil(ranking.length / MAX_QTY_USERS_PER_PAGE))
+                //setPageQty(Math.ceil(ranking.length / MAX_QTY_USERS_PER_PAGE))
             })
             .catch((e) => {
                 alert(e)
@@ -41,9 +41,10 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
 
     useEffect(() => {
         const handlePagination = () => {
-            const start = (page - 1) * MAX_QTY_USERS_PER_PAGE
-            const end = page * MAX_QTY_USERS_PER_PAGE
-            setRenderedRanking(ranking.slice(start, end))
+            // const start = (page - 1) * MAX_QTY_USERS_PER_PAGE
+            // const end = page * MAX_QTY_USERS_PER_PAGE
+            // setRenderedRanking(ranking.slice(start, end))
+            setRenderedRanking(ranking)
         }
         handlePagination()
     }, [ranking, page])
@@ -79,27 +80,15 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
                         ''
                     )}
                     <tbody>
-                        {renderedRanking.map((user) => (
-                            <tr
-                                key={
-                                    user.userId.slice()[0] === '0'
-                                        ? user.userId
-                                        : null
-                                }
-                            >
-                                <td>
-                                    {user.userId.slice()[0] === '0'
-                                        ? user.username
-                                        : null}
-                                </td>
-                                <td>
-                                    {user.userId.slice()[0] === '0'
-                                        ? user.score
-                                        : null}
-                                </td>
-                                {/* <td>{user.copinha || 0}</td> */}
-                            </tr>
-                        ))}
+                        {renderedRanking
+                            .filter((e) => e.userId.slice()[0] === '0')
+                            .map((user) => (
+                                <tr key={user.userId}>
+                                    <td>{`${user.username}`}</td>
+                                    <td>{user.score}</td>
+                                    {/* <td>{user.copinha || 0}</td> */}
+                                </tr>
+                            ))}
                     </tbody>
                 </table>
                 <div>
