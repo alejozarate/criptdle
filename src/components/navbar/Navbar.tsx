@@ -9,7 +9,7 @@ import { TwitterCtx } from '../../context/TwitterContext'
 import { postUserToDb } from '../../lib/firebaseActions'
 
 import UAuth from '@uauth/js'
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
 
 type Props = {
     setIsInfoModalOpen: (value: boolean) => void
@@ -51,8 +51,7 @@ export const Navbar = ({
             const uid = authorization.idToken.wallet_address || ''
 
             console.log('Logged in ')
-            console.log(authorization)
-            // setAuthenticated(true)
+            setAuthenticated(true)
             console.log('Domain name: ', displayName)
             console.log('ETH address: ', uid)
 
@@ -67,7 +66,7 @@ export const Navbar = ({
         console.log('Logged out with Unstoppable')
     }
 
-    console.log({ authenticated })
+    useEffect(() => {}, [authenticated])
 
     return (
         <div className="navbar">
