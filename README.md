@@ -6,6 +6,6 @@ Live URL with working integration: https://criptdle-git-hackathon-alejozarate.ve
 
 Person of contact in case there are any questions: Santiago Cristobal
 
-Discord OR Telegram OR email @Santicristobal
+Telegram: @Santicristobal
 
 UnstoppableDomain registered account email address: tomijais@gmail.com
