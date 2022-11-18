@@ -43,6 +43,7 @@ export const Navbar = ({
     setIsSettingsModalOpen,
 }: Props) => {
     const [authenticated, setAuthenticated] = useState<boolean>(false)
+    const [displayName, setDisplayName] = useState<string | false>(false)
 
     window.login = async () => {
         try {
@@ -50,10 +51,8 @@ export const Navbar = ({
             const displayName = authorization.idToken.sub
             const uid = authorization.idToken.wallet_address || ''
 
-            console.log('Logged in ')
             setAuthenticated(true)
-            console.log('Domain name: ', displayName)
-            console.log('ETH address: ', uid)
+            setDisplayName(displayName)
 
             postUserToDb({ displayName, uid })
         } catch (error) {
@@ -65,8 +64,6 @@ export const Navbar = ({
         await uauth.logout()
         console.log('Logged out with Unstoppable')
     }
-
-    useEffect(() => {}, [authenticated])
 
     return (
         <div className="navbar">
@@ -111,6 +108,7 @@ export const Navbar = ({
                             Login with Unstoppable
                         </button>
                     )}
+                    {authenticated && <p>Hello {displayName}</p>}
                 </div>
             </div>
             <hr></hr>
