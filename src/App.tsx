@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react'
+import { useState, useEffect } from 'react'
 import { Grid } from './components/grid/Grid'
 import { Keyboard } from './components/keyboard/Keyboard'
 import { InfoModal } from './components/modals/InfoModal'
@@ -21,7 +21,6 @@ import {
     REVEAL_TIME_MS,
     GAME_LOST_INFO_DELAY,
     WELCOME_INFO_MODAL_MS,
-    BASE_SCORE,
     MAX_POINTS,
 } from './constants/settings'
 import {
@@ -45,10 +44,8 @@ import { AlertContainer } from './components/alerts/AlertContainer'
 import { useAlert } from './context/AlertContext'
 import { Navbar } from './components/navbar/Navbar'
 import { updateScore } from './lib/firebaseActions'
-import { TwitterCtx } from './context/TwitterContext'
 
 function App() {
-    const twitterContext = useContext(TwitterCtx)
     const prefersDarkMode = window.matchMedia(
         '(prefers-color-scheme: dark)'
     ).matches
@@ -63,7 +60,6 @@ function App() {
     const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
     const [currentRowClass, setCurrentRowClass] = useState('')
     const [isGameLost, setIsGameLost] = useState(false)
-    const [isTwitterEnabled, setIsTwitterEnabled] = useState(false)
     const [isDarkMode, setIsDarkMode] = useState(
         localStorage.getItem('theme')
             ? localStorage.getItem('theme') === 'dark'
@@ -143,17 +139,6 @@ function App() {
         }
     }
 
-    const handleTwitterUser = (isTwitterEnabled: boolean) => {
-        setIsTwitterEnabled(isTwitterEnabled)
-        if (isTwitterEnabled) {
-            twitterContext?.twitterSignIn()
-        }
-
-        if (!isTwitterEnabled) {
-            twitterContext?.twitterSignOut()
-        }
-    }
-
     const handleHighContrastMode = (isHighContrast: boolean) => {
         setIsHighContrastMode(isHighContrast)
         setStoredIsHighContrastMode(isHighContrast)
@@ -185,10 +170,6 @@ function App() {
             }, GAME_LOST_INFO_DELAY)
         }
     }, [isGameWon, isGameLost, showSuccessAlert])
-
-    useEffect(() => {
-        setIsTwitterEnabled(twitterContext?.authenticated ? true : false)
-    }, [twitterContext?.authenticated])
 
     const onChar = (value: string) => {
         if (
@@ -364,8 +345,6 @@ function App() {
                     handleDarkMode={handleDarkMode}
                     isHighContrastMode={isHighContrastMode}
                     handleHighContrastMode={handleHighContrastMode}
-                    isTwitterEnabled={isTwitterEnabled}
-                    handleTwitterUser={handleTwitterUser}
                 />
                 <RankingModal
                     isOpen={isRankingModalOpen}

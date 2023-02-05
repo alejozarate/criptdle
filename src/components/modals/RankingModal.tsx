@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BaseModal } from './BaseModal'
 
 import { getRanking, rankeredUser } from '../../lib/firebaseActions'
@@ -6,8 +6,6 @@ import {
     NEXT_PAGINATION_TEXT,
     PREVIOUS_PAGINATION_TEXT,
 } from '../../constants/strings'
-
-import { TwitterCtx } from '../../context/TwitterContext'
 import { MAX_QTY_USERS_PER_PAGE } from '../../constants/settings'
 
 type Props = {
@@ -19,19 +17,13 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
     const [ranking, setRanking] = useState<rankeredUser[]>([])
     const [page, setPage] = useState(1)
     const [renderedRanking, setRenderedRanking] = useState<rankeredUser[]>([])
-    const [pageQty, setPageQty] = useState<Number>(1)
-
-    const context = useContext(TwitterCtx)
-
-    useEffect(() => {
-        context?.checkUserAuth()
-    }, [context])
+    const pageQty = 1
 
     useEffect(() => {
         getRanking()
             .then((ranking) => {
                 setRanking(ranking)
-                setPageQty(Math.ceil(ranking.length / MAX_QTY_USERS_PER_PAGE))
+                //setPageQty(Math.ceil(ranking.length / MAX_QTY_USERS_PER_PAGE))
             })
             .catch((e) => {
                 alert(e)
@@ -40,35 +32,28 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
 
     useEffect(() => {
         const handlePagination = () => {
-            const start = (page - 1) * MAX_QTY_USERS_PER_PAGE
-            const end = page * MAX_QTY_USERS_PER_PAGE
-            setRenderedRanking(ranking.slice(start, end))
+            // const start = (page - 1) * MAX_QTY_USERS_PER_PAGE
+            // const end = page * MAX_QTY_USERS_PER_PAGE
+            // setRenderedRanking(ranking.slice(start, end))
+            setRenderedRanking(ranking)
         }
         handlePagination()
     }, [ranking, page])
 
     return (
-        <BaseModal
-            title="Twitter Ranking"
-            isOpen={isOpen}
-            handleClose={handleClose}
-        >
+        <BaseModal title="Ranking" isOpen={isOpen} handleClose={handleClose}>
             <div className="flex flex-col items-center mt-2 dark:text-white">
                 <p className="mb-4">
                     El score se determina por la cantidad de intentos para
                     adivinar cada palabra. A menor cantidad de intentos mejor
                     puntaje, como si estuvieses jugando al Golf.{' '}
-                    {context?.authenticated ? (
+                    {/* TODO: import from UnstoppableContext */}
+                    {false ? (
                         ''
                     ) : (
                         <span>
-                            Para participar tenés que{' '}
-                            <span
-                                onClick={context?.twitterSignIn}
-                                className={'underline cursor-pointer'}
-                            >
-                                loguearte con Twitter.
-                            </span>
+                            Para participar tenés que loguearte con Unstoppable
+                            Domains.
                         </span>
                     )}
                 </p>
@@ -77,23 +62,25 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
                         <thead>
                             <tr>
                                 <th className="text-xl text-blue-400">
-                                    Twitter
+                                    Unstoppable Domains
                                 </th>
                                 <th className="text-xl">Score</th>
-                                <th className="text-xl">Copinhas</th>
+                                {/* <th className="text-xl">Copinhas</th> */}
                             </tr>
                         </thead>
                     ) : (
                         ''
                     )}
                     <tbody>
-                        {renderedRanking.map((user) => (
-                            <tr key={user.userId}>
-                                <td>@{user.username}</td>
-                                <td>{user.score}</td>
-                                <td>{user.copinha || 0}</td>
-                            </tr>
-                        ))}
+                        {renderedRanking
+                            .filter((e) => e.userId.slice()[0] === '0')
+                            .map((user) => (
+                                <tr key={user.userId}>
+                                    <td>{`${user.username}`}</td>
+                                    <td>{user.score}</td>
+                                    {/* <td>{user.copinha || 0}</td> */}
+                                </tr>
+                            ))}
                     </tbody>
                 </table>
                 <div>

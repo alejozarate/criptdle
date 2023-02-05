@@ -31,6 +31,11 @@ export type twitterObject = {
     uid: string | null
 }
 
+export type unstoppableObject = {
+    displayName: string | null
+    uid: string | null
+}
+
 export const saveStatsToLocalStorage = (gameStats: GameStats) => {
     localStorage.setItem(gameStatKey, JSON.stringify(gameStats))
 }
@@ -51,6 +56,32 @@ export const setStoredIsHighContrastMode = (isHighContrast: boolean) => {
 export const getStoredIsHighContrastMode = () => {
     const highContrast = localStorage.getItem(highContrastKey)
     return highContrast === '1'
+}
+
+const UNSTOPPABLE_DATA_KEY = 'unstoppableData'
+
+export const saveUnstoppableUserToLocalStorage = (
+    unstoppableUser: unstoppableObject
+) => {
+    const { displayName, uid } = unstoppableUser
+
+    const objectData = {
+        displayName,
+        uid,
+    }
+
+    localStorage.setItem(UNSTOPPABLE_DATA_KEY, JSON.stringify(objectData))
+}
+
+export const deleteUnstoppableUserFromLocalStorage = () => {
+    localStorage.removeItem(UNSTOPPABLE_DATA_KEY)
+}
+
+export const getUnstoppableUser = () => {
+    const unstoppableUserLocal = JSON.parse(
+        localStorage.getItem(UNSTOPPABLE_DATA_KEY) || '{}'
+    )
+    return unstoppableUserLocal
 }
 
 export const saveTwitterUserToLocalStorage = (twitterUser: twitterObject) => {

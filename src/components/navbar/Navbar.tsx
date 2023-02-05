@@ -5,7 +5,10 @@ import {
     StarIcon,
 } from '@heroicons/react/outline'
 import { GAME_TITLE } from '../../constants/strings'
-import TwitterButton from '../authentication/TwitterButton'
+import Signout from '../icons/signout'
+
+import { UnstoppableCtx } from '../../context/UnstoppableContext'
+import { useContext } from 'react'
 
 type Props = {
     setIsInfoModalOpen: (value: boolean) => void
@@ -20,6 +23,14 @@ export const Navbar = ({
     setIsRankingModalOpen,
     setIsSettingsModalOpen,
 }: Props) => {
+    const unstoppableCtx = useContext(UnstoppableCtx)
+
+    const {
+        unstoppableSignIn,
+        unstoppableSignOut,
+        displayName,
+        authenticated,
+    } = unstoppableCtx
     return (
         <div className="navbar">
             <div className="px-5 navbar-content">
@@ -58,7 +69,25 @@ export const Navbar = ({
                         onClick={() => setIsRankingModalOpen(true)}
                         className="w-6 h-6 mr-3 cursor-pointer dark:stroke-white"
                     />
-                    <TwitterButton />
+                    {!authenticated && (
+                        <button
+                            onClick={() => unstoppableSignIn()}
+                            className="dark:text-white"
+                        >
+                            Login with Unstoppable
+                        </button>
+                    )}
+                    {authenticated && (
+                        <div className="flex gap-4 items-center">
+                            <p className="dark:text-white">{displayName}</p>
+                            <div
+                                className="dark:text-white w-[18px] h-[18px] cursor-pointer"
+                                onClick={() => unstoppableSignOut()}
+                            >
+                                <Signout />
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
             <hr></hr>
