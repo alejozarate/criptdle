@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BaseModal } from './BaseModal'
 
 import { getRanking, rankeredUser } from '../../lib/firebaseActions'
@@ -6,10 +6,7 @@ import {
     NEXT_PAGINATION_TEXT,
     PREVIOUS_PAGINATION_TEXT,
 } from '../../constants/strings'
-
-import { TwitterCtx } from '../../context/TwitterContext'
 import { MAX_QTY_USERS_PER_PAGE } from '../../constants/settings'
-import { domains } from '../../constants/domains'
 
 type Props = {
     isOpen: boolean
@@ -20,13 +17,7 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
     const [ranking, setRanking] = useState<rankeredUser[]>([])
     const [page, setPage] = useState(1)
     const [renderedRanking, setRenderedRanking] = useState<rankeredUser[]>([])
-    const [pageQty, setPageQty] = useState<Number>(1)
-
-    const context = useContext(TwitterCtx)
-
-    useEffect(() => {
-        context?.checkUserAuth()
-    }, [context])
+    const pageQty = 1
 
     useEffect(() => {
         getRanking()
@@ -56,7 +47,8 @@ export const RankingModal = ({ isOpen, handleClose }: Props) => {
                     El score se determina por la cantidad de intentos para
                     adivinar cada palabra. A menor cantidad de intentos mejor
                     puntaje, como si estuvieses jugando al Golf.{' '}
-                    {context?.authenticated ? (
+                    {/* TODO: import from UnstoppableContext */}
+                    {false ? (
                         ''
                     ) : (
                         <span>

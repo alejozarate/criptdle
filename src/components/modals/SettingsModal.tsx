@@ -14,8 +14,6 @@ type Props = {
     handleDarkMode: Function
     isHighContrastMode: boolean
     handleHighContrastMode: Function
-    isTwitterEnabled: boolean
-    handleTwitterUser: Function
 }
 
 export const SettingsModal = ({
@@ -27,8 +25,6 @@ export const SettingsModal = ({
     handleDarkMode,
     isHighContrastMode,
     handleHighContrastMode,
-    isTwitterEnabled,
-    handleTwitterUser,
 }: Props) => {
     return (
         <BaseModal

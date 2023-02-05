@@ -5,11 +5,10 @@ import {
     StarIcon,
 } from '@heroicons/react/outline'
 import { GAME_TITLE } from '../../constants/strings'
-import { TwitterCtx } from '../../context/TwitterContext'
-import { postUserToDb } from '../../lib/firebaseActions'
+import Signout from '../icons/signout'
 
-import UAuth from '@uauth/js'
-import { createContext, useContext, useEffect, useState } from 'react'
+import { UnstoppableCtx } from '../../context/UnstoppableContext'
+import { useContext } from 'react'
 
 type Props = {
     setIsInfoModalOpen: (value: boolean) => void
@@ -18,53 +17,20 @@ type Props = {
     setIsSettingsModalOpen: (value: boolean) => void
 }
 
-const uauth = new UAuth({
-    clientID: 'c393e2c7-3dda-47d6-a571-a936680d87ae',
-    redirectUri: 'https://criptdle-git-hackathon-alejozarate.vercel.app/',
-    scope: 'openid wallet',
-})
-
-interface AppContextInterface {
-    authenticated: boolean
-    setAuthenticated: (authenticated: boolean) => void
-    username: String | null
-    setUsername: (username: string | null) => void
-    UnstoppableSignIn: () => void
-    UnstoppableSignOut: () => void
-    checkUserAuth: () => void
-}
-
-export const UnstoppableCtx = createContext<AppContextInterface | null>(null)
-
 export const Navbar = ({
     setIsInfoModalOpen,
     setIsStatsModalOpen,
     setIsRankingModalOpen,
     setIsSettingsModalOpen,
 }: Props) => {
-    const [authenticated, setAuthenticated] = useState<boolean>(false)
-    const [displayName, setDisplayName] = useState<string | false>(false)
+    const unstoppableCtx = useContext(UnstoppableCtx)
 
-    window.login = async () => {
-        try {
-            const authorization = await uauth.loginWithPopup()
-            const displayName = authorization.idToken.sub
-            const uid = authorization.idToken.wallet_address || ''
-
-            setAuthenticated(true)
-            setDisplayName(displayName)
-
-            postUserToDb({ displayName, uid })
-        } catch (error) {
-            console.error(error)
-        }
-    }
-
-    window.logout = async () => {
-        await uauth.logout()
-        console.log('Logged out with Unstoppable')
-    }
-
+    const {
+        unstoppableSignIn,
+        unstoppableSignOut,
+        displayName,
+        authenticated,
+    } = unstoppableCtx
     return (
         <div className="navbar">
             <div className="px-5 navbar-content">
@@ -104,11 +70,24 @@ export const Navbar = ({
                         className="w-6 h-6 mr-3 cursor-pointer dark:stroke-white"
                     />
                     {!authenticated && (
-                        <button onClick={() => window.login()}>
+                        <button
+                            onClick={() => unstoppableSignIn()}
+                            className="dark:text-white"
+                        >
                             Login with Unstoppable
                         </button>
                     )}
-                    {authenticated && <p>Hello {displayName}</p>}
+                    {authenticated && (
+                        <div className="flex gap-4 items-center">
+                            <p className="dark:text-white">{displayName}</p>
+                            <div
+                                className="dark:text-white w-[18px] h-[18px] cursor-pointer"
+                                onClick={() => unstoppableSignOut()}
+                            >
+                                <Signout />
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
             <hr></hr>
